@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plain White Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Calibri', sans-serif;
+            background-color: #fff;
+        }
+
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Handlee', cursive; /* Change to cursive font */
+        }
+
+        .navbar-brand img {
+            height: 40px; /* Adjust the height of the SVG */
+            margin-right: 10px; /* Add some spacing between the logo and text */
+        }
+
+        .navbar-links {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-left: auto;
+        }
+
+        .navbar-links li {
+            margin-right: 20px;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .take-test-btn {
+            background-color: #bfefff;
+            padding: 12px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: 'Calibri', sans-serif;
+        }
+
+        .take-test-btn:hover {
+            background-color: #a9e2ff;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+            background-color: #bfefff;
+        }
+
+        .image-container img {
+            width: 100%;
+        }
+
+        .image-text {
+            position: absolute;
+            bottom: 25%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: calc(100% - 80px);
+            color: white;
+            font-size: 72px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: left;
+            margin: 0 40px;
+        }
+
+        .sub-heading {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: calc(100% - 80px);
+            color: white;
+            font-size: 28px;
+            font-weight: normal;
+            line-height: 1.4;
+            text-align: left;
+            margin: 0 40px;
+        }
+
+        .services-container {
+            background-color: #bfefff;
+            padding: 60px 20%;
+            margin-bottom: 40px;
+        }
+
+        .our-services {
+            font-size: 72px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .service {
+            width: 22%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #bfefff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service h3 {
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .page-content {
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 40px;
+            line-height: 1.5;
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        
+        .additional-content {
+    background-color: #fff; 
+    padding: 60px 40px; 
+    text-align: center;
+}
+
+
+        
+        .additional-btn {
+    display: inline-block;
+    padding: 15px 30px; 
+    border: 2px solid #fff;
+    border-radius: 30px; 
+    background-color: #bfefff;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-size: 24px; 
+}
+
+.additional-btn:hover {
+    background-color: #fff;
+    border-color: #bfefff;
+}
+
+.philosophy-text {
+    font-size: 30px;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.contact-text {
+    font-size: 72px;
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.4;
+}
+
+.contact-details {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.footer {
+    background-color: #bfefff;
+    padding: 50px 0; /* Increase the padding to make the footer taller */
+    text-align: center;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content img {
+    width: 2%; /* Scale down to 70% */
+    margin: 0 10px; /* Add margin between the SVG images */
+}
+
+.cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    transition: opacity 0.5s ease; /* Add transition for opacity */
+}
+
+.cookie-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cookie-buttons {
+    margin-top: 10px;
+}
+
+.cookie-buttons button {
+    margin: 0 10px;
+    padding: 15px 30px; /* Increase padding to make the buttons bigger */
+    font-size: 15px; /* Set font size for button text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #bfefff; /* Set background color of the buttons */
+}
+
+.cookie-content p {
+    font-size: 20px; /* Adjust the font size as needed */
+}
+
+/* Class to fade out the popup */
+.fade-out {
+    opacity: 0;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand" onclick="location.reload();">
+            <img src="lighthouse.svg" alt="Lighthouse Logo"> <!-- Add the SVG logo here -->
+            LIGHTHOUSE
+        </div>
+        <ul class="navbar-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="test.html" class="take-test-btn">Take the Test</a></li>
+        </ul>
+    </nav>
+
+    <div class="image-container">
+        <img src="therapy0.jpg" alt="Therapy Image">
+        <h1 class="image-text">Welcome to Lighthouse<br>Couple Insights.</h1>
+        <h4 class="sub-heading">Unlock personalized pre-dating guidance, available either in-person<br>or from the convenience of your home,<br>ensuring a smoother journey towards meaningful connections.</h4>
+    </div>
+
+    <div class="services-container">
+        <h3 class="our-services">Our Services</h3>
+
+        <div class="services-grid">
+            <div class="service">
+                <img src="services0.svg" alt="Dating Coaching SVG" style="width: 25%;">
+                <h3>Dating Coaching</h3>
+                <p> <br>Empower yourself with personalized coaching sessions aimed at enhancing your dating skills and confidence.</p>
+            </div>
+            <div class="service">
+                <img src="services1.svg" alt="Pre-Dating Test SVG" style="width: 25%;">
+                <h3>Pre-Dating Test</h3>
+                <p> <br>Take our comprehensive pre-dating test designed to analyze your compatibility and readiness for a meaningful relationship.</p>
+            </div>
+            <div class="service">
+                <img src="services2.svg" alt="Relationship Counseling SVG" style="width: 25%;">
+                <h3>Relationship Counseling</h3>
+                <p>Benefit from our expert relationship counseling sessions, tailored to address specific issues and strengthen your connection.</p>
+            </div>
+            <div class="service">
+                <img src="services3.svg" alt="Marriage Counseling SVG" style="width: 25%;">
+                <h3>Marriage Counseling</h3>
+                <p>Nurture and revitalize your marriage with our specialized counseling sessions, focused on fostering understanding and harmony.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="testimonial-text">
+            <p>"Can't express how grateful we are for Sarah's guidance<br> in our sessions. She consistently offers fresh insights and<br> perspectives on the challenges we face as a couple.<br> Sarah fosters an environment of openness and honesty,<br> where we feel understood and supported.<br> If you're navigating through marital issues and<br> need someone to talk to, Sarah is the one to call."</p>
+        </div>
+
+        <!-- New div for additional content -->
+        <div class="additional-content">
+            <a href="#" class="additional-btn">Take Pre-Dating Test</a>
+        </div>
+    </div>
+
+  <div class="additional-content">
+    <h3 class="our-services">Our Philosophy</h3>
+    <p class="philosophy-text">When life seems chaotic and confusing, we are here to help guide<br> and direct you to find peace and transformation. God is in the business of<br> transformation and we are here to help!<br>
+    Through counseling, we walk alongside you in the process of rising from frustration,<br> anxiety, depression, and hopelessness to developing a clear plan to a better<br> life with tools learned in sessions. We provide a safe and confidential environment in which to develop<br> trust and confidence.
+    We have a diverse staff willing to walk alongside you<br> in whatever journey you are on. If life has you down, please look us up!</p>
+</div>
+
+<div class="contact-info">
+    <h3 class="our-services">Contact Us</h3>
+    <p class="contact-details">
+        <span>scheduling@lighthousecounselingcm.com</span><br>
+        <span>mailto:billing@lighthousecounselingcm.com</span><br> <br> <br>
+        <span>314 Franklin Ave, Ste 403<br> Berlin, MD 21811<br> (667) 288-1486</span><br> <br> <br>
+        <span>1485 Still Meadow Blvd, Unit #3<br> Salisbury, MD 21804<br> (410) 973-2211</span><br> <br> <br>
+        <span>30265 Commerce Drive, Ste 205<br> Millsboro, DE 19966<br> (302) 245-8722</span><br>
+    </p>
+</div>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <img src="footer0.svg" alt="Footer Image 0">
+        <img src="footer1.svg" alt="Footer Image 1">
+        <img src="footer2.svg" alt="Footer Image 2">
+    </div>
+</footer>
+
+<!-- Cookie consent pop-up -->
+    <div id="cookie-popup" class="cookie-popup">
+        <div class="cookie-content">
+            <p>This website uses cookies to ensure you get the best experience on our website.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="accept-cookies">Accept</button>
+                <button id="reject-cookies" class="reject-cookies">Reject</button>
+            </div>
+        </div>
+    </div>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const cookiePopup = document.getElementById('cookie-popup');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+        const rejectCookiesBtn = document.getElementById('reject-cookies');
+
+        // Function to close the cookie popup
+        function closeCookiePopup() {
+            cookiePopup.classList.add('fade-out');
+            setTimeout(() => {
+                cookiePopup.style.display = 'none';
+            }, 500); // Adjust the delay to match the CSS transition duration
+        }
+
+        // Function to handle accepting cookies
+        function acceptCookies() {
+            // Set a flag in localStorage indicating that cookies are accepted
+            localStorage.setItem('cookiesAccepted', 'true');
+            // Close the cookie popup
+            closeCookiePopup();
+        }
+
+        // Function to handle rejecting cookies
+        function rejectCookies() {
+            // Set a flag in localStorage indicating that cookies are rejected
+            localStorage.setItem('cookiesAccepted', 'false');
+            // Close the cookie popup
+            closeCookiePopup();
+        }
+
+        // Event listeners for accept and reject buttons
+        acceptCookiesBtn.addEventListener('click', acceptCookies);
+        rejectCookiesBtn.addEventListener('click', rejectCookies);
+
+        // Show the cookie popup only if the user has not previously interacted with it
+        if (!localStorage.getItem('cookiesAccepted')) {
+            cookiePopup.style.display = 'block';
+        }
+    });
+</script>
+
+
+</body>
+</html>
