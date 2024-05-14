@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plain White Website</title>
+    <title>Dating Counselling | Lighthouse Couple Insights</title>
+      <!-- Set favicon -->
+    <link rel="icon" href="lighthouse.svg" type="image/svg+xml">
     <style>
         body {
             margin: 0;
@@ -22,16 +24,16 @@
 
         .navbar-brand {
             display: flex;
-            align-items: center; /* Align items vertically */
+            align-items: center;
             font-size: 24px;
             font-weight: bold;
             cursor: pointer;
-            font-family: 'Handlee', cursive; /* Change to cursive font */
+            font-family: 'Handlee', cursive;
         }
 
         .navbar-brand img {
-            height: 40px; /* Adjust the height of the SVG */
-            margin-right: 10px; /* Add some spacing between the logo and text */
+            height: 40px;
+            margin-right: 10px;
         }
 
         .navbar-links {
@@ -161,135 +163,154 @@
             font-weight: bold;
         }
 
-        
         .additional-content {
-    background-color: #fff; 
-    padding: 60px 40px; 
-    text-align: center;
-}
+            background-color: #fff;
+            padding: 60px 40px;
+            text-align: center;
+        }
 
-
-        
         .additional-btn {
-    display: inline-block;
-    padding: 15px 30px; 
-    border: 2px solid #fff;
-    border-radius: 30px; 
+            display: inline-block;
+            padding: 15px 30px;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            background-color: #bfefff;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 24px;
+        }
+
+        .additional-btn:hover {
+            background-color: #fff;
+            border-color: #bfefff;
+        }
+
+        .philosophy-text {
+            font-size: 30px;
+            font-weight: normal;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+
+        .contact-text {
+            font-size: 72px;
+            font-weight: normal;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+
+        .contact-details {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+      .appointment-form-container {
     background-color: #bfefff;
-    color: #333;
+}
+
+.appointment-form {
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: #bfefff; /* Match the background color of the container */
+}
+
+.appointment-form h3 {
+    font-size: 36px;
     font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s, border-color 0.3s;
-    font-size: 24px; 
-}
-
-.additional-btn:hover {
-    background-color: #fff;
-    border-color: #bfefff;
-}
-
-.philosophy-text {
-    font-size: 30px;
-    font-weight: normal;
     color: #333;
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.4;
-}
-
-.contact-text {
-    font-size: 72px;
-    font-weight: normal;
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
-    line-height: 1.4;
-}
-
-.contact-details {
-    font-size: 24px;
-    line-height: 1;
-}
-
-.contact-info {
+    margin-bottom: 20px;
     text-align: center;
 }
 
-.footer {
-    background-color: #bfefff;
-    padding: 50px 0; /* Increase the padding to make the footer taller */
-    text-align: center;
+.appointment-form input[type="text"],
+.appointment-form input[type="tel"],
+.appointment-form input[type="email"],
+.appointment-form textarea {
+    width: calc(100% - 30px); /* Adjust the width of the input fields */
+    max-width: 100%; /* Make sure the width doesn't exceed 100% */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none; /* Remove default border */
+    border-radius: 0; /* Remove rounded corners */
+    font-size: 18px;
+    margin-left: auto; /* Align input fields in the middle */
+    margin-right: auto; /* Align input fields in the middle */
+    background-color: transparent; /* Set background color */
+    border-bottom: 2px solid #ccc; /* Add underline border */
+}
+
+.appointment-form textarea {
+    height: 150px; /* Adjust height as needed */
+}
+
+.appointment-form button[type="submit"] {
+    display: block; /* Ensure button takes full width */
+    width: 100%; /* Make button full width */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.appointment-form button[type="submit"]:hover {
+    background-color: #555;
 }
 
 
-.footer-content {
+
+        .footer {
+            background-color: #bfefff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    max-width: 70px; /* Optional: Adjust the maximum width to control spacing */
+    margin: 0 auto; /* Optional: Center the footer content */
 }
 
 .footer-content img {
-    width: 2%; /* Scale down to 70% */
-    margin: 0 10px; /* Add margin between the SVG images */
+    width: 100%;
 }
 
-.cookie-popup {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #f7f7f7;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
-    transition: opacity 0.5s ease; /* Add transition for opacity */
-}
 
-.cookie-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.cookie-buttons {
-    margin-top: 10px;
-}
-
-.cookie-buttons button {
-    margin: 0 10px;
-    padding: 15px 30px; /* Increase padding to make the buttons bigger */
-    font-size: 15px; /* Set font size for button text */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #bfefff; /* Set background color of the buttons */
-}
-
-.cookie-content p {
-    font-size: 20px; /* Adjust the font size as needed */
-}
-
-/* Class to fade out the popup */
-.fade-out {
-    opacity: 0;
-}
 
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-brand" onclick="location.reload();">
-            <img src="lighthouse.svg" alt="Lighthouse Logo"> <!-- Add the SVG logo here -->
-            LIGHTHOUSE
-        </div>
-        <ul class="navbar-links">
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="test.html" class="take-test-btn">Take the Test</a></li>
-        </ul>
-    </nav>
+    <div class="navbar-brand" onclick="window.location.href='index.html';">
+        <img src="lighthouse.svg" alt="Lighthouse Logo">
+        LIGHTHOUSE COUPLE INSIGHTS
+    </div>
+    <ul class="navbar-links">
+        <li><a href="#" onclick="scrollToSection('#philosophy')">About</a></li>
+        <li><a href="#" onclick="scrollToSection('#services')">Services</a></li>
+        <li><a href="#" onclick="scrollToSection('#contact')">Contact</a></li>
+        <li><a href="test.html" class="take-test-btn">Take the Test</a></li>
+    </ul>
+</nav>
 
     <div class="image-container">
         <img src="therapy0.jpg" alt="Therapy Image">
@@ -297,7 +318,7 @@
         <h4 class="sub-heading">Unlock personalized pre-dating guidance, available either in-person<br>or from the convenience of your home,<br>ensuring a smoother journey towards meaningful connections.</h4>
     </div>
 
-    <div class="services-container">
+    <div id="services" class="services-container">
         <h3 class="our-services">Our Services</h3>
 
         <div class="services-grid">
@@ -331,88 +352,95 @@
 
         <!-- New div for additional content -->
         <div class="additional-content">
-            <a href="#" class="additional-btn">Take Pre-Dating Test</a>
+            <a href="test.html" class="additional-btn">Take Pre-Dating Test</a>
+
         </div>
     </div>
 
-  <div class="additional-content">
-    <h3 class="our-services">Our Philosophy</h3>
-    <p class="philosophy-text">When life seems chaotic and confusing, we are here to help guide<br> and direct you to find peace and transformation. God is in the business of<br> transformation and we are here to help!<br>
-    Through counseling, we walk alongside you in the process of rising from frustration,<br> anxiety, depression, and hopelessness to developing a clear plan to a better<br> life with tools learned in sessions. We provide a safe and confidential environment in which to develop<br> trust and confidence.
-    We have a diverse staff willing to walk alongside you<br> in whatever journey you are on. If life has you down, please look us up!</p>
-</div>
-
-<div class="contact-info">
-    <h3 class="our-services">Contact Us</h3>
-    <p class="contact-details">
-        <span>scheduling@lighthousecounselingcm.com</span><br>
-        <span>mailto:billing@lighthousecounselingcm.com</span><br> <br> <br>
-        <span>314 Franklin Ave, Ste 403<br> Berlin, MD 21811<br> (667) 288-1486</span><br> <br> <br>
-        <span>1485 Still Meadow Blvd, Unit #3<br> Salisbury, MD 21804<br> (410) 973-2211</span><br> <br> <br>
-        <span>30265 Commerce Drive, Ste 205<br> Millsboro, DE 19966<br> (302) 245-8722</span><br>
-    </p>
-</div>
-
-
-<footer class="footer">
-    <div class="footer-content">
-        <img src="footer0.svg" alt="Footer Image 0">
-        <img src="footer1.svg" alt="Footer Image 1">
-        <img src="footer2.svg" alt="Footer Image 2">
+    <div id="philosophy" class="additional-content">
+        <h3 class="our-services">Our Philosophy</h3>
+        <p class="philosophy-text">When life seems chaotic and confusing, we are here to help guide<br> and direct you to find peace and transformation. God is in the business of<br> transformation and we are here to help!<br>
+        Through counseling, we walk alongside you in the process of rising from frustration,<br> anxiety, depression, and hopelessness to developing a clear plan to a better<br> life with tools learned in sessions. We provide a safe and confidential environment in which to develop<br> trust and confidence.
+        We have a diverse staff willing to walk alongside you<br> in whatever journey you are on. If life has you down, please look us up!</p>
     </div>
+
+   <div class="contact-appointment-container">
+    <div id="contact" class="contact-info">
+        <h3 class="our-services">Contact Us</h3>
+        <p class="contact-details">
+            <span>scheduling@lighthousecoupleinsights.com</span><br>
+            <span>billing@lighthousecoupleinsights.com</span><br> <br> <br>
+            <span>314 Franklin Ave, Ste 403<br> Berlin, MD 21811<br> (667) 288-1486</span><br> <br> <br>
+            <span>1485 Still Meadow Blvd, Unit #3<br> Salisbury, MD 21804<br> (410) 973-2211</span><br> <br> <br>
+            <span>30265 Commerce Drive, Ste 205<br> Millsboro, DE 19966<br> (302) 245-8722</span><br>
+        </p>
+    </div>
+
+   <div class="appointment-form-container">
+    <div class="appointment-form">
+        <h3>Schedule an Appointment</h3>
+        <form action="submit_appointment.php" method="POST">
+            <input type="text" name="name" placeholder="Name" required><br>
+            <input type="tel" name="phone" placeholder="Phone" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <textarea name="message" placeholder="Type your message here..." required></textarea><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+      </div>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <a href="https://www.facebook.com/lighthousecounselingcm/?ref=aymt_homepage_panel&eid=ARDa_YEWRrorhXB7eugGV1MFcaHWshhdc3xyvk0WTZFd7ymGab5TEJixNNjv5HJiVlkTOGKrlooWHgDe" target="_blank">
+            <img src="footer0.svg" alt="Footer Image 0">
+        </a>
+        <a href="https://www.instagram.com/lighthousecounselingcm/" target="_blank">
+            <img src="footer1.svg" alt="Footer Image 1">
+        </a>
+    </div>
+    <p style="text-align: center;">©2019 by The Lighthouse Counselling Pte Ltd</p>
 </footer>
 
-<!-- Cookie consent pop-up -->
-    <div id="cookie-popup" class="cookie-popup">
-        <div class="cookie-content">
-            <p>This website uses cookies to ensure you get the best experience on our website.</p>
-            <div class="cookie-buttons">
-                <button id="accept-cookies" class="accept-cookies">Accept</button>
-                <button id="reject-cookies" class="reject-cookies">Reject</button>
-            </div>
-        </div>
-    </div>
+<script>
+    // Custom easing function: easeInOutCubic
+    // Adapted from https://easings.net/#easeInOutCubic
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
 
- <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const cookiePopup = document.getElementById('cookie-popup');
-        const acceptCookiesBtn = document.getElementById('accept-cookies');
-        const rejectCookiesBtn = document.getElementById('reject-cookies');
-
-        // Function to close the cookie popup
-        function closeCookiePopup() {
-            cookiePopup.classList.add('fade-out');
-            setTimeout(() => {
-                cookiePopup.style.display = 'none';
-            }, 500); // Adjust the delay to match the CSS transition duration
+    function scrollToSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const sectionPosition = section.offsetTop - navbarHeight;
+        const startTime = performance.now();
+        const duration = 1000; // Adjust duration as needed
+        
+        function scrollAnimation(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const timeFraction = elapsedTime / duration;
+            
+            if (timeFraction < 1) {
+                const progress = easeInOutCubic(timeFraction);
+                const scrollTo = sectionPosition * progress;
+                window.scrollTo({
+                    top: scrollTo,
+                    behavior: 'auto'
+                });
+                requestAnimationFrame(scrollAnimation);
+            } else {
+                window.scrollTo({
+                    top: sectionPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
-
-        // Function to handle accepting cookies
-        function acceptCookies() {
-            // Set a flag in localStorage indicating that cookies are accepted
-            localStorage.setItem('cookiesAccepted', 'true');
-            // Close the cookie popup
-            closeCookiePopup();
-        }
-
-        // Function to handle rejecting cookies
-        function rejectCookies() {
-            // Set a flag in localStorage indicating that cookies are rejected
-            localStorage.setItem('cookiesAccepted', 'false');
-            // Close the cookie popup
-            closeCookiePopup();
-        }
-
-        // Event listeners for accept and reject buttons
-        acceptCookiesBtn.addEventListener('click', acceptCookies);
-        rejectCookiesBtn.addEventListener('click', rejectCookies);
-
-        // Show the cookie popup only if the user has not previously interacted with it
-        if (!localStorage.getItem('cookiesAccepted')) {
-            cookiePopup.style.display = 'block';
-        }
-    });
+        
+        requestAnimationFrame(scrollAnimation);
+    }
 </script>
+
 
 
 </body>
