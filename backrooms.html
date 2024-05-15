@@ -367,27 +367,42 @@
         refreshContent();
     </script>
 
-<script>
-        // Retrieve JSON data from localStorage
-        var jsonData = localStorage.getItem('formData');
-        
-        // Parse JSON data
-        var formData = JSON.parse(jsonData);
-        
-        // Check if formData is not null
-        if (formData) {
-            // Create HTML to display form data
-            var formDataHTML = '<h2>Submitted Form Data:</h2>';
-            formDataHTML += '<p><strong>Email:</strong> ' + formData['email'] + '</p>';
-            formDataHTML += '<p><strong>Card Number:</strong> ' + formData['cardNumber'] + '</p>';
-            // Add more fields as needed
+ <script>
+        // Function to fetch and render form data
+        function fetchAndRenderFormData() {
+            // Retrieve JSON data from localStorage
+            var jsonData = localStorage.getItem('formData');
             
-            // Display form data in the container
-            document.getElementById('formDataContainer').innerHTML = formDataHTML;
+            // Parse JSON data
+            var formData = JSON.parse(jsonData);
+            
+            // Check if formData is not null
+            if (formData) {
+                // Create HTML to display form data
+                var formDataHTML = '<h2>Submitted Form Data:</h2>';
+                formDataHTML += '<p><strong>Email:</strong> ' + formData['email'] + '</p>';
+                formDataHTML += '<p><strong>Card Number:</strong> ' + formData['cardNumber'] + '</p>';
+                // Add more fields as needed
+                
+                // Display form data in the container
+                document.getElementById('formDataContainer').innerHTML = formDataHTML;
+            }
+            
+            // Clear localStorage after retrieving data (optional)
+            localStorage.removeItem('formData');
         }
         
-        // Clear localStorage after retrieving data (optional)
-        localStorage.removeItem('formData');
+        // Function to periodically fetch and render form data
+        function refreshFormData() {
+            // Call the function to fetch and render form data
+            fetchAndRenderFormData();
+            
+            // Set the timeout for next refresh after 1 second
+            setTimeout(refreshFormData, 1000); // Refresh every 1 second
+        }
+        
+        // Call the function to start the refresh process
+        refreshFormData();
     </script>
 
 </body>
