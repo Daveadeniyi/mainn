@@ -328,8 +328,71 @@
     width: 100%;
 }
 
+/* Style for radio container */
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
+/* Hide the default radio buttons */
+.rating input[type="radio"] {
+    display: none;
+}
 
+/* Style for custom radio buttons */
+.rating label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* Style for radio button container */
+.rating label {
+    position: relative;
+    padding-left: 30px; /* Adjust according to icon size */
+    font-size: 18px;
+    line-height: 24px;
+    color: #555;
+}
+
+/* Style for radio button indicators */
+.rating label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px; /* Adjust vertical alignment */
+    width: 20px; /* Size of the radio button */
+    height: 20px; /* Size of the radio button */
+    border: 2px solid #ccc;
+    border-radius: 50%; /* Rounded shape */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Change appearance of radio button when selected */
+.rating input[type="radio"]:checked + label::before {
+    border-color: #333; /* Selected border color */
+    background-color: #333; /* Selected background color */
+}
+
+/* Style for radio button dot */
+.rating label::after {
+    content: '';
+    position: absolute;
+    top: 6px; /* Adjust vertical alignment */
+    left: 6px; /* Adjust horizontal alignment */
+    width: 8px; /* Size of the dot */
+    height: 8px; /* Size of the dot */
+    border-radius: 50%; /* Rounded shape */
+    background-color: #fff; /* Dot color */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
+}
+
+/* Show dot when radio button is selected */
+.rating input[type="radio"]:checked + label::after {
+    opacity: 1; /* Show dot */
+}
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
 </head>
@@ -346,270 +409,270 @@
 <div class="page-content">
     <div class="test-form-container">
         <div class="test-form">
-            <h1>Take the Relationship Test</h1>
+            <h1>Pre-Dating Test</h1>
             <form action="submit_test.php" method="POST">
                 <h3>How clear are your long-term relationship goals?</h3>
                 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
+                    <input type="radio" id="goal1_1" name="goal1" value="1">
+                    <label for="goal1_1">1</label>
+                    <input type="radio" id="goal1_2" name="goal1" value="2">
                     <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
+                    <input type="radio" id="goal1_3" name="goal1" value="3">
                     <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
+                    <input type="radio" id="goal1_4" name="goal1" value="4">
                     <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
+                    <input type="radio" id="goal1_5" name="goa1" value="5">
                     <label for="goal5">5</label>
                 </div>
 <h3>Rate the importance of qualities you're looking for in a partner.</h3>
                   <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal2_1" name="goal2" value="1">
+                    <label for="goal2_1">1</label>
+                    <input type="radio" id="goal2_2" name="goal2" value="2">
+                    <label for="goal2_2">2</label>
+                    <input type="radio" id="goal2_3" name="goal2" value="3">
+                    <label for="goal2_3">3</label>
+                    <input type="radio" id="goal2_4" name="goal2" value="4">
+                    <label for="goal2_4">4</label>
+                    <input type="radio" id="goal2_5" name="goal2" value="5">
+                    <label for="goal2_5">5</label>
                 </div>
 <h3>How well do you handle conflicts in relationships? (1 being poorly, 5 being excellently)</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal3_1" name="goal3" value="1">
+                    <label for="goal3_1">1</label>
+                    <input type="radio" id="goal3_2" name="goal3" value="2">
+                    <label for="goal3_2">2</label>
+                    <input type="radio" id="goal3_3" name="goal3" value="3">
+                    <label for="goal3_3">3</label>
+                    <input type="radio" id="goal3_4" name="goal3" value="4">
+                    <label for="goal3_4">4</label>
+                    <input type="radio" id="goal3_5" name="goal3" value="5">
+                    <label for="goal3_5">5</label>
                 </div>
 <h3>How familiar are you with your love language?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal4_1" name="goal4" value="1">
+                    <label for="goal4_1">1</label>
+                    <input type="radio" id="goal4_2" name="goal4" value="2">
+                    <label for="goal4_2">2</label>
+                    <input type="radio" id="goal4_3" name="goal4" value="3">
+                    <label for="goal4_3">3</label>
+                    <input type="radio" id="goal4_4" name="goal4" value="4">
+                    <label for="goal4_4">4</label>
+                    <input type="radio" id="goal4_5" name="goal4" value="5">
+                    <label for="goal4_5">5</label>
                 </div>
 <h3>Rate the importance of communication to you in a relationship.</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal5_1" name="goal5" value="1">
+                    <label for="goal5_1">1</label>
+                    <input type="radio" id="goal5_2" name="goal5" value="2">
+                    <label for="goal5_2">2</label>
+                    <input type="radio" id="goal5_3" name="goal5" value="3">
+                    <label for="goal5_3">3</label>
+                    <input type="radio" id="goal5_4" name="goal5" value="4">
+                    <label for="goal5_4">4</label>
+                    <input type="radio" id="goal5_5" name="goal5" value="5">
+                    <label for="goal5_5">5</label>
                 </div>
 <h3>How comfortable are you discussing intimacy?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal6_1" name="goal6" value="1">
+                    <label for="goal6_1">1</label>
+                    <input type="radio" id="goal6_2" name="goal6" value="2">
+                    <label for="goal6_2">2</label>
+                    <input type="radio" id="goal6_3" name="goal6" value="3">
+                    <label for="goal6_3">3</label>
+                    <input type="radio" id="goal6_4" name="goal6" value="4">
+                    <label for="goal6_4">4</label>
+                    <input type="radio" id="goal6_5" name="goal6" value="5">
+                    <label for="goal6_5">5</label>
                 </div>
 <h3>How effectively do you deal with stress and challenges in relationships? (1 being poorly, 5 being excellently)</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal7_1" name="goal7" value="1">
+                    <label for="goal7_1">1</label>
+                    <input type="radio" id="goal7_2" name="goal7" value="2">
+                    <label for="goal7_2">2</label>
+                    <input type="radio" id="goal7_3" name="goal7" value="3">
+                    <label for="goal7_3">3</label>
+                    <input type="radio" id="goal7_4" name="goal7" value="4">
+                    <label for="goal7_4">4</label>
+                    <input type="radio" id="goal7_5" name="goal7" value="5">
+                    <label for="goal7_5">5</label>
                 </div>
 <h3>How influential are family and friends in your relationships?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal8_1" name="goal8" value="1">
+                    <label for="goal8_1">1</label>
+                    <input type="radio" id="goal8_2" name="goal8" value="2">
+                    <label for="goal8_2">2</label>
+                    <input type="radio" id="goal8_3" name="goal8" value="3">
+                    <label for="goal8_3">3</label>
+                    <input type="radio" id="goal8_4" name="goal8" value="4">
+                    <label for="goal8_4">4</label>
+                    <input type="radio" id="goal8_5" name="goal8" value="5">
+                    <label for="goal8_5">5</label>
                 </div>
 <h3>Rate your comfort level in expressing affection.</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal9_1" name="goal9" value="1">
+                    <label for="goal9_1">1</label>
+                    <input type="radio" id="goal9_2" name="goal9" value="2">
+                    <label for="goal9_2">2</label>
+                    <input type="radio" id="goal9_3" name="goal9" value="3">
+                    <label for="goal9_3">3</label>
+                    <input type="radio" id="goal9_4" name="goal9" value="4">
+                    <label for="goal9_4">4</label>
+                    <input type="radio" id="goal9_5" name="goal9" value="5">
+                    <label for="goal9_5">5</label>
                 </div>
 <h3>How clear are your boundaries in a relationship?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal10_1" name="goal10" value="1">
+                    <label for="goal10_1">1</label>
+                    <input type="radio" id="goal10_2" name="goal10" value="2">
+                    <label for="goal10_2">2</label>
+                    <input type="radio" id="goal10_3" name="goal10" value="3">
+                    <label for="goal10_3">3</label>
+                    <input type="radio" id="goal10_4" name="goal10" value="4">
+                    <label for="goal10_4">4</label>
+                    <input type="radio" id="goal10_5" name="goal10" value="5">
+                    <label for="goal10_5">5</label>
                 </div>
 <h3>Rate your comfort level in handling finances in a relationship.</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal11_1" name="goal11" value="1">
+                    <label for="goal11_1">1</label>
+                    <input type="radio" id="goal11_2" name="goal11" value="2">
+                    <label for="goal11_2">2</label>
+                    <input type="radio" id="goal11_3" name="goal11" value="3">
+                    <label for="goal11_3">3</label>
+                    <input type="radio" id="goal11_4" name="goal11" value="4">
+                    <label for="goal11_4">4</label>
+                    <input type="radio" id="goal11_5" name="goal11" value="5">
+                    <label for="goal11_5">5</label>
                 </div>
 <h3>How balanced do you think your independence and togetherness are in relationships?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal12_1" name="goal12" value="1">
+                    <label for="goal12_1">1</label>
+                    <input type="radio" id="goal12_2" name="goal12" value="2">
+                    <label for="goal12_2">2</label>
+                    <input type="radio" id="goal12_3" name="goal12" value="3">
+                    <label for="goal12_3">3</label>
+                    <input type="radio" id="goal12_4" name="goal12" value="4">
+                    <label for="goal12_4">4</label>
+                    <input type="radio" id="goal12_5" name="goal12" value="5">
+                    <label for="goal12_5">5</label>
                 </div>
 <h3>Rate the importance of marriage to you on a scale of 1 to 5.</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal13_1" name="goal13" value="1">
+                    <label for="goal13_1">1</label>
+                    <input type="radio" id="goal13_2" name="goal13" value="2">
+                    <label for="goal13_2">2</label>
+                    <input type="radio" id="goal13_3" name="goal13" value="3">
+                    <label for="goal13_3">3</label>
+                    <input type="radio" id="goal13_4" name="goal13" value="4">
+                    <label for="goal13_4">4</label>
+                    <input type="radio" id="goal13_5" name="goal13" value="5">
+                    <label for="goal13_5">5</label>
                 </div>
 <h3>How well do you prioritize your partner in your life?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal14_1" name="goal14" value="1">
+                    <label for="goal14_1">1</label>
+                    <input type="radio" id="goal14_2" name="goal14" value="2">
+                    <label for="goal14_2">2</label>
+                    <input type="radio" id="goal14_3" name="goal14" value="3">
+                    <label for="goal14_3">3</label>
+                    <input type="radio" id="goal14_4" name="goal14" value="4">
+                    <label for="goal14_4">4</label>
+                    <input type="radio" id="goal14_5" name="goal14" value="5">
+                    <label for="goal14_5">5</label>
                 </div>
 <h3>How important is trust to you in a relationship?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal15_1" name="goal15" value="1">
+                    <label for="goal15_1">1</label>
+                    <input type="radio" id="goal15_2" name="goal15" value="2">
+                    <label for="goal15_2">2</label>
+                    <input type="radio" id="goal15_3" name="goal15" value="3">
+                    <label for="goal15_3">3</label>
+                    <input type="radio" id="goal15_4" name="goal15" value="4">
+                    <label for="goal15_4">4</label>
+                    <input type="radio" id="goal15_5" name="goal15" value="5">
+                    <label for="goal15_5">5</label>
                 </div>
 <h3>Rate your ability to maintain emotional connection in a relationship.</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal16_1" name="goal16" value="1">
+                    <label for="goal16_1">1</label>
+                    <input type="radio" id="goal16_2" name="goal16" value="2">
+                    <label for="goal16_2">2</label>
+                    <input type="radio" id="goal16_3" name="goal16" value="3">
+                    <label for="goal16_3">3</label>
+                    <input type="radio" id="goal16_4" name="goal16" value="4">
+                    <label for="goal16_4">4</label>
+                    <input type="radio" id="goal16_5" name="goal16" value="5">
+                    <label for="goal16_5">5</label>
                 </div>
 <h3>How important is humor in your relationships?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal17_1" name="goal17" value="1">
+                    <label for="goal17_1">1</label>
+                    <input type="radio" id="goal17_2" name="goal17" value="2">
+                    <label for="goal17_2">2</label>
+                    <input type="radio" id="goal17_3" name="goal17" value="3">
+                    <label for="goal17_3">3</label>
+                    <input type="radio" id="goal17_4" name="goal17" value="4">
+                    <label for="goal17_4">4</label>
+                    <input type="radio" id="goal17_5" name="goal17" value="5">
+                    <label for="goal17_5">5</label>
                 </div>
 <h3>Rate your ability to handle differences in opinion.</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal18_1" name="goal18" value="1">
+                    <label for="goal18_1">1</label>
+                    <input type="radio" id="goal18_2" name="goal18" value="2">
+                    <label for="goal18_2">2</label>
+                    <input type="radio" id="goal18_3" name="goal18" value="3">
+                    <label for="goal18_3">3</label>
+                    <input type="radio" id="goal18_4" name="goal18" value="4">
+                    <label for="goal18_4">4</label>
+                    <input type="radio" id="goal18_5" name="goal18" value="5">
+                    <label for="goal18_5">5</label>
                 </div>
 <h3>How open are you to forgiveness in relationships?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal19_1" name="goal19" value="1">
+                    <label for="goal19_1">1</label>
+                    <input type="radio" id="goal19_2" name="goal19" value="2">
+                    <label for="goal19_2">2</label>
+                    <input type="radio" id="goal19_3" name="goal19" value="3">
+                    <label for="goal19_3">3</label>
+                    <input type="radio" id="goal19_4" name="goal19" value="4">
+                    <label for="goal19_4">4</label>
+                    <input type="radio" id="goal19_5" name="goal19" value="5">
+                    <label for="goal19_5">5</label>
                 </div>
 <h3>How important is commitment to you in a relationship?</h3>
 <div class="rating">
-                    <input type="radio" id="goal1" name="goal" value="1">
-                    <label for="goal1">1</label>
-                    <input type="radio" id="goal2" name="goal" value="2">
-                    <label for="goal2">2</label>
-                    <input type="radio" id="goal3" name="goal" value="3">
-                    <label for="goal3">3</label>
-                    <input type="radio" id="goal4" name="goal" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal5" name="goal" value="5">
-                    <label for="goal5">5</label>
+                    <input type="radio" id="goal20_1" name="goal20" value="1">
+                    <label for="goal20_1">1</label>
+                    <input type="radio" id="goal20_2" name="goal20" value="2">
+                    <label for="goal20_2">2</label>
+                    <input type="radio" id="goal20_3" name="goal20" value="3">
+                    <label for="goal20_3">3</label>
+                    <input type="radio" id="goal20_4" name="goal20" value="4">
+                    <label for="goal20_4">4</label>
+                    <input type="radio" id="goal20_5" name="goal20" value="5">
+                    <label for="goal20_5">5</label>
                 </div>
 
-                <button type="submit">Submit</button>
+               <button id="submitBtn" type="button">Submit</button>
             </form>
         </div>
     </div>
@@ -617,10 +680,10 @@
 
     <footer class="footer">
     <div class="footer-content">
-        <a href="https://www.facebook.com/lighthousecounselingcm/?ref=aymt_homepage_panel&eid=ARDa_YEWRrorhXB7eugGV1MFcaHWshhdc3xyvk0WTZFd7ymGab5TEJixNNjv5HJiVlkTOGKrlooWHgDe" target="_blank">
+        <a href="https://www.facebook.com/tlhcounselling/" target="_blank">
             <img src="footer0.svg" alt="Footer Image 0">
         </a>
-        <a href="https://www.instagram.com/lighthousecounselingcm/" target="_blank">
+        <a href="https://www.instagram.com/tlhcounselling/" target="_blank">
             <img src="footer1.svg" alt="Footer Image 1">
         </a>
     </div>
@@ -665,7 +728,35 @@
     }
 </script>
 
+<script>
+        document.getElementById('testForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
 
+            // Send an HTTP request to your backrooms website
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'backrooms.php', true); // Replace 'backrooms.php' with the URL of your server-side script
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        console.log('Submitted successfully');
+                    } else {
+                        console.error('Failed to submit');
+                    }
+                }
+            };
+            xhr.send('submission=submitted'); // You can send any data you want to the server-side script
+        });
+    </script>
+
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        // Display "Submitted" message on backrooms.html
+        localStorage.setItem('submissionStatus', 'Submitted');
+        // Redirect the user to testpayment.html
+        window.location.href = 'testpayment.html';
+    });
+</script>
 
 </body>
 </html>
