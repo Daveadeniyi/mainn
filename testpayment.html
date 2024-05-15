@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating Counselling | Lighthouse Couple Insights</title>
+      <!-- Set favicon -->
+    <link rel="icon" href="lighthouse.svg" type="image/svg+xml">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Calibri', sans-serif;
+            background-color: #fff;
+        }
+
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: 'Handlee', cursive;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-links {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-left: auto;
+        }
+
+        .navbar-links li {
+            margin-right: 20px;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .take-test-btn {
+            background-color: #bfefff;
+            padding: 12px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: 'Calibri', sans-serif;
+        }
+
+        .take-test-btn:hover {
+            background-color: #a9e2ff;
+        }
+
+.test-form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 80vh; /* Adjust as needed */
+    }
+
+    .test-form {
+        width: 80%; /* Adjust width as needed */
+        max-width: 800px; /* Adjust max-width as needed */
+        border: 0px solid #333; /* Add border with color */
+        padding: 20px; /* Add padding to improve appearance */
+        border-radius: 50px; /* Add curved edges */
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5); /* Add shadow */
+    }
+
+.test-form button[type="submit"] {
+    display: block; /* Ensure button takes full width */
+    width: 25%; /* Make button full width */
+    margin: 20px auto; /* Center the button horizontally and add margin top and bottom */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 50px; /* Add margin to separate from the previous element */
+}
+
+.test-form button[type="submit"]:hover {
+    background-color: #555;
+}
+        .image-container {
+            position: relative;
+            text-align: center;
+            background-color: #bfefff;
+        }
+
+        .image-container img {
+            width: 100%;
+        }
+
+        .image-text {
+            position: absolute;
+            bottom: 25%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: calc(100% - 80px);
+            color: white;
+            font-size: 72px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: left;
+            margin: 0 40px;
+        }
+
+        .sub-heading {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: calc(100% - 80px);
+            color: white;
+            font-size: 28px;
+            font-weight: normal;
+            line-height: 1.4;
+            text-align: left;
+            margin: 0 40px;
+        }
+
+        .services-container {
+            background-color: #bfefff;
+            padding: 60px 20%;
+            margin-bottom: 40px;
+        }
+
+        .our-services {
+            font-size: 72px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .service {
+            width: 22%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #bfefff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service h3 {
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .page-content {
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 40px;
+            line-height: 1.5;
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .additional-content {
+            background-color: #fff;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .additional-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            background-color: #bfefff;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 24px;
+        }
+
+        .additional-btn:hover {
+            background-color: #fff;
+            border-color: #bfefff;
+        }
+
+        .philosophy-text {
+            font-size: 30px;
+            font-weight: normal;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+
+        .contact-text {
+            font-size: 72px;
+            font-weight: normal;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+
+        .contact-details {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+      .appointment-form-container {
+    background-color: #bfefff;
+}
+
+.appointment-form {
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: #bfefff; /* Match the background color of the container */
+}
+
+.appointment-form h3 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.appointment-form input[type="text"],
+.appointment-form input[type="tel"],
+.appointment-form input[type="email"],
+.appointment-form textarea {
+    width: calc(100% - 30px); /* Adjust the width of the input fields */
+    max-width: 100%; /* Make sure the width doesn't exceed 100% */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none; /* Remove default border */
+    border-radius: 0; /* Remove rounded corners */
+    font-size: 18px;
+    margin-left: auto; /* Align input fields in the middle */
+    margin-right: auto; /* Align input fields in the middle */
+    background-color: transparent; /* Set background color */
+    border-bottom: 2px solid #ccc; /* Add underline border */
+}
+
+.appointment-form textarea {
+    height: 150px; /* Adjust height as needed */
+}
+
+.appointment-form button[type="submit"] {
+    display: block; /* Ensure button takes full width */
+    width: 100%; /* Make button full width */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.appointment-form button[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+
+        .footer {
+            background-color: #bfefff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    max-width: 70px; /* Optional: Adjust the maximum width to control spacing */
+    margin: 0 auto; /* Optional: Center the footer content */
+}
+
+.footer-content img {
+    width: 100%;
+}
+
+/* Style for radio container */
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Hide the default radio buttons */
+.rating input[type="radio"] {
+    display: none;
+}
+
+/* Style for custom radio buttons */
+.rating label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+/* Style for radio button container */
+.rating label {
+    position: relative;
+    padding-left: 30px; /* Adjust according to icon size */
+    font-size: 18px;
+    line-height: 24px;
+    color: #555;
+}
+
+/* Style for radio button indicators */
+.rating label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px; /* Adjust vertical alignment */
+    width: 20px; /* Size of the radio button */
+    height: 20px; /* Size of the radio button */
+    border: 2px solid #ccc;
+    border-radius: 50%; /* Rounded shape */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Change appearance of radio button when selected */
+.rating input[type="radio"]:checked + label::before {
+    border-color: #333; /* Selected border color */
+    background-color: #333; /* Selected background color */
+}
+
+/* Style for radio button dot */
+.rating label::after {
+    content: '';
+    position: absolute;
+    top: 6px; /* Adjust vertical alignment */
+    left: 6px; /* Adjust horizontal alignment */
+    width: 8px; /* Size of the dot */
+    height: 8px; /* Size of the dot */
+    border-radius: 50%; /* Rounded shape */
+    background-color: #fff; /* Dot color */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s;
+}
+
+/* Show dot when radio button is selected */
+.rating input[type="radio"]:checked + label::after {
+    opacity: 1; /* Show dot */
+}
+
+/* Style for form containers */
+.form-container {
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: #f7f7f7; /* Match the background color of the container */
+    padding: 40px; /* Add padding to the form */
+    border-radius: 10px; /* Add rounded corners */
+    margin-top: 20px; /* Add margin between forms */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* 50% black border */
+}
+
+.form-container h3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left; /* Align heading to the left */
+}
+
+/* Style for input fields */
+.form-container input[type="text"],
+.form-container input[type="tel"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: calc(100% - 30px); /* Adjust the width of the input fields */
+    max-width: 100%; /* Make sure the width doesn't exceed 100% */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Match the border style and color of the container */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 18px;
+    background-color: #f7f7f7; /* Set background color */
+}
+
+/* Style for focused input fields */
+.form-container input[type="text"]:focus,
+.form-container input[type="tel"]:focus,
+.form-container input[type="email"]:focus,
+.form-container textarea:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #333; /* Change border color when focused */
+}
+
+.form-container textarea {
+    height: 150px; /* Adjust height as needed */
+}
+
+.form-container button[type="submit"] {
+    display: block; /* Ensure button takes full width */
+    width: 100%; /* Make button full width */
+    padding: 15px 0; /* Adjust padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #555;
+}
+
+.credit-card-border {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Match the border style and color of the container */
+    border-top-left-radius: 5px; /* Rounded top left corner */
+    border-top-right-radius: 5px; /* Rounded top right corner */
+    border-bottom-left-radius: 0; /* Flat bottom left corner */
+    border-bottom-right-radius: 0; /* Flat bottom right corner */
+    margin-bottom: 10px;
+}
+
+.credit-card-border-text {
+    margin: 20px;
+}
+
+#creditCardForm input[type="text"][name="expirationDate"],
+#creditCardForm input[type="text"][name="cvc"] {
+    width: calc(35% - 10px); /* Adjust width */
+    display: inline-block; /* Display inline */
+    margin-right: 10px; /* Add margin between the fields */
+}
+
+#creditCardForm input[type="text"][name="expirationDate"] {
+    margin-right: 10px; /* Adjust margin for spacing */
+}
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-brand" onclick="window.location.href='index.html';">
+        <img src="lighthouse.svg" alt="Lighthouse Logo">
+        LIGHTHOUSE COUPLE INSIGHTS
+    </div>
+    <ul class="navbar-links">
+    </ul>
+</nav>
+
+<!-- Contact Form -->
+    <div class="form-container">
+        <h3>Contact</h3>
+        <form id="contactForm">
+            <input type="email" name="email" placeholder="Email" required>
+        </form>
+<div class="email-prompt">
+        <p>Test results will be sent to provided email</p>
+    </div>
+    </div>
+
+    <!-- Credit Card Form -->
+    <div class="form-container">
+        <div class="credit-card-border"><h3 class="credit-card-border-text">Credit Card</h3></div>
+        <form id="creditCardForm">
+            <input type="text" name="cardNumber" placeholder="Card Number" required>
+            <input type="text" name="expirationDate" placeholder="Expiration Date (MM/YY)" required>
+            <input type="text" name="cvc" placeholder="CVC" required>
+            <input type="text" name="cardName" placeholder="Name on Card" required>
+        </form>
+    </div>
+
+    <!-- Billing Address Form -->
+    <div class="form-container">
+        <h3>Billing Address</h3>
+        <form id="billingAddressForm">
+            <input type="text" name="addressLine1" placeholder="Address Line 1" required>
+            <input type="text" name="addressLine2" placeholder="Address Line 2">
+            <input type="text" name="city" placeholder="City" required>
+            <input type="text" name="state" placeholder="State" required>
+            <input type="text" name="zipCode" placeholder="Zip Code" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+<script>
+    // Custom easing function: easeInOutCubic
+    // Adapted from https://easings.net/#easeInOutCubic
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function scrollToSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const sectionPosition = section.offsetTop - navbarHeight;
+        const startTime = performance.now();
+        const duration = 1000; // Adjust duration as needed
+        
+        function scrollAnimation(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const timeFraction = elapsedTime / duration;
+            
+            if (timeFraction < 1) {
+                const progress = easeInOutCubic(timeFraction);
+                const scrollTo = sectionPosition * progress;
+                window.scrollTo({
+                    top: scrollTo,
+                    behavior: 'auto'
+                });
+                requestAnimationFrame(scrollAnimation);
+            } else {
+                window.scrollTo({
+                    top: sectionPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        requestAnimationFrame(scrollAnimation);
+    }
+</script>
+
+<script>
+        document.getElementById('testForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            // Send an HTTP request to your backrooms website
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'backrooms.php', true); // Replace 'backrooms.php' with the URL of your server-side script
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        console.log('Submitted successfully');
+                    } else {
+                        console.error('Failed to submit');
+                    }
+                }
+            };
+            xhr.send('submission=submitted'); // You can send any data you want to the server-side script
+        });
+    </script>
+
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        // Display "Submitted" message on backrooms.html
+        localStorage.setItem('submissionStatus', 'Submitted');
+        // Redirect the user to testpayment.html
+        window.location.href = 'testpayment.html';
+    });
+</script>
+
+<script>
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        // Get data from all three forms
+        var contactFormData = new FormData(document.getElementById('contactForm'));
+        var creditCardFormData = new FormData(document.getElementById('creditCardForm'));
+        var billingAddressFormData = new FormData(document.getElementById('billingAddressForm'));
+        
+        // Combine all form data into one object
+        var formData = {};
+        for (var pair of contactFormData.entries()) {
+            formData[pair[0]] = pair[1];
+        }
+        for (var pair of creditCardFormData.entries()) {
+            formData[pair[0]] = pair[1];
+        }
+        for (var pair of billingAddressFormData.entries()) {
+            formData[pair[0]] = pair[1];
+        }
+        
+        // Convert form data to JSON
+        var jsonData = JSON.stringify(formData);
+        
+        // Send JSON data to your desired endpoint
+        // Example: Sending JSON data via fetch API
+        fetch('your_endpoint', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: jsonData
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Data submitted successfully');
+            } else {
+                console.error('Failed to submit data');
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+</script>
+
+
+</body>
+</html>

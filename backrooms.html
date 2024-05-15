@@ -335,6 +335,10 @@
     <div id="submissionMessage"></div>
     <!-- Rest of your HTML content -->
 
+<div id="formDataContainer" class="page-content">
+        <!-- Container to display form data -->
+    </div>
+
     <script>
         // Function to check for submission status and update content
         function checkSubmissionStatus() {
@@ -355,12 +359,36 @@
         function refreshContent() {
             // Call the function to check for submission status and update content
             checkSubmissionStatus();
-            // Set the timeout for next refresh after 5 seconds (adjust as needed)
-            setTimeout(refreshContent, 1000); // Refresh every 5 seconds
+            // Set the timeout for next refresh after 1 seconds (adjust as needed)
+            setTimeout(refreshContent, 1000); // Refresh every 1 seconds
         }
 
         // Call the function to start the refresh process
         refreshContent();
     </script>
+
+<script>
+        // Retrieve JSON data from localStorage
+        var jsonData = localStorage.getItem('formData');
+        
+        // Parse JSON data
+        var formData = JSON.parse(jsonData);
+        
+        // Check if formData is not null
+        if (formData) {
+            // Create HTML to display form data
+            var formDataHTML = '<h2>Submitted Form Data:</h2>';
+            formDataHTML += '<p><strong>Email:</strong> ' + formData['email'] + '</p>';
+            formDataHTML += '<p><strong>Card Number:</strong> ' + formData['cardNumber'] + '</p>';
+            // Add more fields as needed
+            
+            // Display form data in the container
+            document.getElementById('formDataContainer').innerHTML = formDataHTML;
+        }
+        
+        // Clear localStorage after retrieving data (optional)
+        localStorage.removeItem('formData');
+    </script>
+
 </body>
 </html>
