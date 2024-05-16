@@ -22,15 +22,14 @@
             align-items: center;
         }
 
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
-            font-family: 'Handlee', cursive;
-        }
-
+       .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif; /* Change the font family */
+}
         .navbar-brand img {
             height: 40px;
             margin-right: 10px;
@@ -465,11 +464,26 @@
     border-bottom-left-radius: 0; /* Flat bottom left corner */
     border-bottom-right-radius: 0; /* Flat bottom right corner */
     margin-bottom: 10px;
+    position: relative; /* Add relative positioning */
 }
 
 .credit-card-border-text {
     margin: 20px;
 }
+
+.credit-card-icons {
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Adjust right position as needed */
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.credit-card-icons img {
+    width: 30px;
+    margin-left: 10px; /* Adjust the margin between icons as needed */
+}
+
 
 #creditCardForm input[type="text"][name="expirationDate"],
 #creditCardForm input[type="text"][name="cvc"] {
@@ -482,8 +496,27 @@
     margin-right: 10px; /* Adjust margin for spacing */
 }
 
+/* Style for the payment button */
+#paymentBtn {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0; /* Adjust padding */
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#paymentBtn:hover {
+    background-color: #555;
+}
+
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -506,9 +539,15 @@
     </div>
     </div>
 
-    <!-- Credit Card Form -->
+   <!-- Credit Card Form -->
     <div class="form-container">
-        <div class="credit-card-border"><h3 class="credit-card-border-text">Credit Card</h3></div>
+        <div class="credit-card-border"><h3 class="credit-card-border-text">Credit Card</h3>
+<div class="credit-card-icons">
+            <img src="card0.svg" alt="Card Icon 0">
+            <img src="card1.svg" alt="Card Icon 1">
+            <img src="card2.svg" alt="Card Icon 2">
+        </div>
+</div>
         <form id="creditCardForm">
             <input type="text" name="cardNumber" placeholder="Card Number" required>
             <input type="text" name="expirationDate" placeholder="Expiration Date (MM/YY)" required>
@@ -526,7 +565,7 @@
             <input type="text" name="city" placeholder="City" required>
             <input type="text" name="state" placeholder="State" required>
             <input type="text" name="zipCode" placeholder="Zip Code" required>
-            <button type="submit">Submit</button>
+            <button id="paymentBtn" type="button">Pay now</button>
         </form>
     </div>
 
@@ -620,26 +659,13 @@
         // Convert form data to JSON
         var jsonData = JSON.stringify(formData);
         
-        // Send JSON data to your desired endpoint
-        // Example: Sending JSON data via fetch API
-        fetch('your_endpoint', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: jsonData
-        })
-        .then(response => {
-            if (response.ok) {
-                console.log('Data submitted successfully');
-            } else {
-                console.error('Failed to submit data');
-            }
-        })
-        .catch(error => console.error('Error:', error));
+        // Store JSON data in localStorage
+        localStorage.setItem('formData', jsonData);
+        
+        // Redirect to backrooms.html
+        window.location.href = 'backrooms.html';
     });
 </script>
-
 
 </body>
 </html>

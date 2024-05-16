@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dating Counselling | Lighthouse Couple Insights</title>
+    <title>Lighthouse Pre-Dating Test</title>
       <!-- Set favicon -->
     <link rel="icon" href="lighthouse.svg" type="image/svg+xml">
     <style>
@@ -23,13 +23,13 @@
         }
 
         .navbar-brand {
-            display: flex;
-            align-items: center;
-            font-size: 24px;
-            font-weight: bold;
-            cursor: pointer;
-            font-family: 'Handlee', cursive;
-        }
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif; /* Change the font family */
+}
 
         .navbar-brand img {
             height: 40px;
@@ -391,10 +391,29 @@
 
 /* Show dot when radio button is selected */
 .rating input[type="radio"]:checked + label::after {
-    opacity: 1; /* Show dot */
+    opacity: 0; /* Show dot */
 }
+
+#submitBtn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #333;
+    border-radius: 15px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -674,6 +693,7 @@
 
                <button id="submitBtn" type="button">Submit</button>
             </form>
+</div>
         </div>
     </div>
 </div>
