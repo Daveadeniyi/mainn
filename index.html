@@ -369,6 +369,14 @@ resize: none; /* Disable resizing */
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
+<script>
+    // Check if the user agent indicates a mobile device
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        // Redirect the user to the mobile version of the website
+        window.location.href = "index_mobile.html";
+    }
+</script>
+    
 </head>
 <body>
     <nav class="navbar">
