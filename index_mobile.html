@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dating Counselling | Lighthouse Couple Insights</title>
+      <!-- Set favicon -->
+    <link rel="icon" href="lighthouse.svg" type="image/svg+xml">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Calibri', sans-serif;
+            background-color: #fff;
+        }
+
+        .navbar {
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif; /* Change the font family */
+}
+
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-links {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            margin-left: auto;
+        }
+
+        .navbar-links li {
+            margin-right: 20px;
+        }
+
+        .navbar-links li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .take-test-btn {
+            background-color: #bfefff;
+            padding: 12px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            font-family: 'Calibri', sans-serif;
+        }
+
+        .take-test-btn:hover {
+            background-color: #a9e2ff;
+        }
+
+        .image-container {
+            position: relative;
+            text-align: center;
+            background-color: #bfefff;
+        }
+
+        .image-container img {
+            width: 100%;
+        }
+
+        .image-text {
+            position: absolute;
+            bottom: 25%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            width: calc(100% - 80px);
+            color: white;
+            font-size: 72px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: left;
+            margin: 0 40px;
+        }
+
+        .sub-heading {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            width: calc(100% - 80px);
+            color: white;
+            font-size: 28px;
+            font-weight: normal;
+            line-height: 1.4;
+            text-align: left;
+            margin: 0 40px;
+        }
+
+        .services-container {
+            background-color: #bfefff;
+            padding: 60px 20%;
+            margin-bottom: 40px;
+        }
+
+        .our-services {
+            font-size: 72px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .service {
+            width: 22%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #bfefff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service h3 {
+            font-size: 30px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service p {
+            font-size: 20px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        .page-content {
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .testimonial-text {
+            font-size: 40px;
+            line-height: 1.5;
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .additional-content {
+            background-color: #fff;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .additional-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            background-color: #bfefff;
+            color: #333;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 24px;
+        }
+
+        .additional-btn:hover {
+            background-color: #fff;
+            border-color: #bfefff;
+        }
+
+        .philosophy-text {
+            font-size: 30px;
+            font-weight: normal;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+
+        .contact-text {
+            font-size: 72px;
+            font-weight: normal;
+            color: #333;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+
+        .contact-details {
+            font-size: 24px;
+            line-height: 1;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+      .appointment-form-container {
+    background-color: #bfefff;
+}
+
+.appointment-form {
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    background-color: #bfefff; /* Match the background color of the container */
+}
+
+.appointment-form h3 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.appointment-form input[type="text"],
+.appointment-form input[type="tel"],
+.appointment-form input[type="email"],
+.appointment-form textarea {
+    width: calc(100% - 30px); /* Adjust the width of the input fields */
+    max-width: 100%; /* Make sure the width doesn't exceed 100% */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none; /* Remove default border */
+    border-radius: 0; /* Remove rounded corners */
+    font-size: 18px;
+    margin-left: auto; /* Align input fields in the middle */
+    margin-right: auto; /* Align input fields in the middle */
+    background-color: transparent; /* Set background color */
+    border-bottom: 2px solid #ccc; /* Add underline border */
+resize: none; /* Disable resizing */
+}
+
+.appointment-form textarea {
+    height: 150px; /* Adjust height as needed */
+}
+
+.appointment-form button[type="button"] {
+    display: block; /* Ensure button takes full width */
+    width: 100%; /* Make button full width */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.appointment-form button[type="button"]:hover {
+    background-color: #555;
+}
+
+.popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: none;
+        }
+
+        .popup img {
+            width: 50px;
+            height: 50px;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+         .popup-text {
+          text-align: center;
+         }
+
+.error-container {
+    text-align: center;
+}
+
+.error-message {
+    font-size: 16px; /* Adjust font size as needed */
+    color: red; /* Adjust color as needed */
+}
+
+        .footer {
+            background-color: #bfefff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    max-width: 70px; /* Optional: Adjust the maximum width to control spacing */
+    margin: 0 auto; /* Optional: Center the footer content */
+}
+
+.footer-content img {
+    width: 100%;
+}
+
+        .privacy-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .heading-main {
+            text-align: center;
+            color: #444;
+        }
+        .heading-section {
+            color: #555;
+        }
+        .paragraph {
+            line-height: 1.6;
+        }
+        .list {
+            line-height: 1.6;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar">
+    <div class="navbar-brand" onclick="window.location.href='index.html';">
+        <img src="lighthouse.svg" alt="Lighthouse Logo">
+        LIGHTHOUSE COUPLE INSIGHTS
+    </div>
+</nav>
+
+<div class="privacy-container">
+        <h1 class="heading-main">Terms of Service</h1>
+        <p class="paragraph"><strong>Effective Date: October 14, 2024</strong></p>
+
+        <h2 class="heading-section">1. Acceptance of Terms</h2>
+        <p class="paragraph">By accessing and using the Lighthouse Couple Insights website (the "Site"), you accept and agree to be bound by the terms and provision of this agreement. In addition, when using this Site's particular services, you shall be subject to any posted guidelines or rules applicable to such services. Any participation in this service will constitute acceptance of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+
+        <h2 class="heading-section">2. Description of Service</h2>
+        <p class="paragraph">Lighthouse Couple Insights provides users with access to pre-dating tests, dating coaching, relationship counseling, and other related services. You are responsible for obtaining access to the Site, and that access may involve third-party fees (such as Internet service provider or airtime charges). You are responsible for those fees. In addition, you must provide and are responsible for all equipment necessary to access the Site.</p>
+
+<h2 class="heading-section">3. User Account, Password, and Security</h2>
+        <p class="paragraph">You are responsible for maintaining the confidentiality of your password and account and are fully responsible for all activities that occur under your password or account. You agree to:
+(a) immediately notify Lighthouse Couple Insights of any unauthorized use of your password or account or any other breach of security, and
+(b) ensure that you exit from your account at the end of each session. Lighthouse Couple Insights cannot and will not be liable for any loss or damage arising from your failure to comply with this Section.</p>
+        
+<h2 class="heading-section">4. Modifications to Service</h2>
+        <p class="paragraph">Lighthouse Couple Insights reserves the right to modify or discontinue, temporarily or permanently, the Service (or any part thereof) with or without notice. You agree that Lighthouse Couple Insights shall not be liable to you or to any third party for any modification, suspension, or discontinuance of the Service.</p>
+
+        <h2 class="heading-section">5. Prohibited Conduct</h2>
+        <p class="paragraph">You agree not to:</p>
+        <ul class="list">
+            <li>Use the Service for any illegal purposes, or in violation of any local, state, national, or international law.</li>
+            <li>Harass, threaten, demean, embarrass, or otherwise harm any other user of the Service.</li>
+            <li>Engage in any other conduct that restricts or inhibits any other person from using or enjoying the Service, or which, in our judgment, exposes us to any liability or detriment of any type.</li>
+        </ul>
+
+        <h2 class="heading-section">6. Termination</h2>
+        <p class="paragraph">Lighthouse Couple Insights may terminate or suspend your access to the Service without prior notice or liability for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease.</p>
+
+        <h2 class="heading-section">7. Disclaimer of Warranties</h2>
+        <p class="paragraph">You expressly understand and agree that:<br>
+(a) Your use of the Service is at your sole risk. The Service is provided on an "AS IS" and "AS AVAILABLE" basis. Lighthouse Couple Insights expressly disclaims all warranties of any kind, whether express or implied.<br>
+(b) Lighthouse Couple Insights makes no warranty that (i) the service will meet your requirements, (ii) the service will be uninterrupted, timely, secure, or error-free, (iii) the results that may be obtained from the use of the service will be accurate or reliable, (iv) the quality of any products, services, information, or other material purchased or obtained by you through the service will meet your expectations, and (v) any errors in the software will be corrected.</p>
+
+        <h2 class="heading-section">8. Limitation of Liability</h2>
+        <p class="paragraph">You expressly understand and agree that Lighthouse Couple Insights shall not be liable for any direct, indirect, incidental, special, consequential, or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses (even if Lighthouse Couple Insights has been advised of the possibility of such damages), resulting from:<br>
+(a) the use or the inability to use the service;<br>
+(b) the cost of procurement of substitute goods and services resulting from any goods, data, information, or services purchased or obtained or messages received or transactions entered into through or from the service;<br>
+(c) unauthorized access to or alteration of your transmissions or data;<br>
+(d) statements or conduct of any third party on the service; or<br>
+(e) any other matter relating to the service.</p>
+
+        <h2 class="heading-section">9. Governing Law</h2>
+        <p class="paragraph">These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of the State of Maryland, USA.</p>
+
+        <h2 class="heading-section">10. Contact Us</h2>
+        <p class="paragraph">If you have any questions about these Terms, please contact us at:</p>
+        <p class="paragraph">Email: <a href="mailto:policy@lighthousecoupleinsights.com">policy@lighthousecoupleinsights.com</a><br>
+        Address: 314 Franklin Ave, Ste 403, Berlin, MD 21811</p>
+        <p class="paragraph">By using our Site, you agree to these Terms and Conditions. If you do not agree, please do not use our Site.</p>
+    </div>
+
+     <footer class="footer">
+    <div class="footer-content">
+        <a href="https://www.facebook.com/tlhcounselling/" target="_blank" style="display: none;">
+            <img src="footer0.svg" alt="Footer Image 0">
+        </a>
+        <a href="https://www.instagram.com/tlhcounselling/" target="_blank" style="display: none;">
+            <img src="footer1.svg" alt="Footer Image 1">
+        </a>
+    </div>
+    <p style="text-align: center;">©2019 by The Lighthouse Counselling Pte Ltd</p>
+    <p style="text-align: center;">
+        <a href="terms-of-service.html" style="color: #333; text-decoration: none;">Terms of Service</a> | 
+        <a href="privacy-policy.html" style="color: #333; text-decoration: none;">Privacy Policy</a>
+    </p>
+</footer>
+
+<script>
+    // Custom easing function: easeInOutCubic
+    // Adapted from https://easings.net/#easeInOutCubic
+    function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function scrollToSection(sectionId) {
+        const section = document.querySelector(sectionId);
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const sectionPosition = section.offsetTop - navbarHeight;
+        const startTime = performance.now();
+        const duration = 1000; // Adjust duration as needed
+        
+        function scrollAnimation(currentTime) {
+            const elapsedTime = currentTime - startTime;
+            const timeFraction = elapsedTime / duration;
+            
+            if (timeFraction < 1) {
+                const progress = easeInOutCubic(timeFraction);
+                const scrollTo = sectionPosition * progress;
+                window.scrollTo({
+                    top: scrollTo,
+                    behavior: 'auto'
+                });
+                requestAnimationFrame(scrollAnimation);
+            } else {
+                window.scrollTo({
+                    top: sectionPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
+        requestAnimationFrame(scrollAnimation);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('submitButton').addEventListener('click', function() {
+            // Check if all required fields are filled
+            const name = document.querySelector('input[name="name"]').value.trim();
+            const phone = document.querySelector('input[name="phone"]').value.trim();
+            const email = document.querySelector('input[name="email"]').value.trim();
+            const message = document.querySelector('textarea[name="message"]').value.trim();
+
+            if (name !== '' && phone !== '' && email !== '' && message !== '') {
+                // All required fields are filled, hide the error message
+                document.querySelector('.error-message').style.display = 'none';
+
+                // Show the popup
+                document.getElementById('popup').style.display = 'block';
+
+                // Hide the popup after 3 seconds
+                setTimeout(function() {
+                    document.getElementById('popup').style.display = 'none';
+                }, 1000);
+            } else {
+                // If any required field is empty, show the error message
+                document.querySelector('.error-message').style.display = 'block';
+            }
+        });
+
+        // Add event listeners to each required field to check for input events
+        const requiredFields = document.querySelectorAll('input[required], textarea[required]');
+        requiredFields.forEach(function(field) {
+            field.addEventListener('input', function() {
+                // Hide the error message when any required field is being filled
+                document.querySelector('.error-message').style.display = 'none';
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>
