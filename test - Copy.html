@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dating Counselling | Lighthouse Couple Insights</title>
+    <title>Lighthouse Pre-Dating Test</title>
       <!-- Set favicon -->
     <link rel="icon" href="lighthouse.svg" type="image/svg+xml">
     <style>
@@ -22,7 +22,7 @@
             align-items: center;
         }
 
-       .navbar-brand {
+        .navbar-brand {
     display: flex;
     align-items: center;
     font-size: 24px;
@@ -30,6 +30,7 @@
     cursor: pointer;
     font-family: 'Playfair Display', serif; /* Change the font family */
 }
+
         .navbar-brand img {
             height: 40px;
             margin-right: 10px;
@@ -393,170 +394,21 @@
     opacity: 1; /* Show dot */
 }
 
-/* Style for form containers */
-.form-container {
-    max-width: 600px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the form horizontally */
-    background-color: #f7f7f7; /* Match the background color of the container */
-    padding: 40px; /* Add padding to the form */
-    border-radius: 10px; /* Add rounded corners */
-    margin-top: 20px; /* Add margin between forms */
-    border: 1px solid rgba(0, 0, 0, 0.1); /* 50% black border */
-}
-
-.form-container h3 {
-    font-size: 25px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: left; /* Align heading to the left */
-}
-
-/* Style for input fields */
-.form-container input[type="text"],
-.form-container input[type="tel"],
-.form-container input[type="email"],
-.form-container textarea {
-    width: calc(100% - 30px); /* Adjust the width of the input fields */
-    max-width: 100%; /* Make sure the width doesn't exceed 100% */
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Match the border style and color of the container */
-    border-radius: 5px; /* Add rounded corners */
-    font-size: 18px;
-    background-color: #f7f7f7; /* Set background color */
-}
-
-/* Style for focused input fields */
-.form-container input[type="text"]:focus,
-.form-container input[type="tel"]:focus,
-.form-container input[type="email"]:focus,
-.form-container textarea:focus {
-    outline: none; /* Remove default focus outline */
-    border-color: #333; /* Change border color when focused */
-}
-
-.form-container textarea {
-    height: 150px; /* Adjust height as needed */
-}
-
-.form-container button[type="submit"] {
-    display: block; /* Ensure button takes full width */
-    width: 100%; /* Make button full width */
-    padding: 15px 0; /* Adjust padding */
-    border: none;
-    border-radius: 5px;
+#submitBtn {
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #333;
+    border-radius: 15px;
     background-color: #333;
     color: #fff;
     font-size: 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
-.form-container button[type="submit"]:hover {
+#submitBtn:hover {
     background-color: #555;
-}
-
-.credit-card-border {
-    border: 1px solid rgba(0, 0, 0, 0.1); /* Match the border style and color of the container */
-    border-top-left-radius: 5px; /* Rounded top left corner */
-    border-top-right-radius: 5px; /* Rounded top right corner */
-    border-bottom-left-radius: 0; /* Flat bottom left corner */
-    border-bottom-right-radius: 0; /* Flat bottom right corner */
-    margin-bottom: 10px;
-    position: relative; /* Add relative positioning */
-}
-
-.credit-card-border-text {
-    margin: 20px;
-}
-
-.credit-card-icons {
-    position: absolute;
-    top: 50%;
-    right: 20px; /* Adjust right position as needed */
-    transform: translateY(-50%);
-    display: flex;
-}
-
-.credit-card-icons img {
-    width: 30px;
-    margin-left: 10px; /* Adjust the margin between icons as needed */
-}
-
-.moonpay-quota {
-text-align: center;
-}
-
-.test-result-voucher-cost {
-text-align: right;
-flex: 0 0 auto;
-}
-
-.transaction-fees-cost {
-text-align: right;
-flex: 0 0 auto;
-}
-
-.total-cost {
-text-align: right;
-flex: 0 0 auto;
-}
-
-/* Container styling to apply flexbox */
-.test-result-voucher-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0px; /* Adjust spacing between rows if needed */
-height: 25px; /* Set the height as needed */
-}
-
-/* Container styling to apply flexbox */
-.transaction-fees-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px; /* Adjust spacing between rows if needed */
-height: 25px; /* Set the height as needed */
-}
-
-/* Container styling to apply flexbox */
-.total-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0px; /* Adjust spacing between rows if needed */
-height: 25px; /* Set the height as needed */
-}
-
-#creditCardForm input[type="text"][name="expirationDate"],
-#creditCardForm input[type="text"][name="cvc"] {
-    width: calc(35% - 10px); /* Adjust width */
-    display: inline-block; /* Display inline */
-    margin-right: 10px; /* Add margin between the fields */
-}
-
-#creditCardForm input[type="text"][name="expirationDate"] {
-    margin-right: 10px; /* Adjust margin for spacing */
-}
-
-/* Style for the payment button */
-#paymentBtn {
-    display: inline-block;
-    width: 100%;
-    padding: 15px 0; /* Adjust padding */
-    border: none;
-    border-radius: 10px;
-    background-color: #653c87;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#paymentBtn:hover {
-    background-color: #9A79BA;
+    border-color: #555;
 }
 
     </style>
@@ -573,69 +425,32 @@ height: 25px; /* Set the height as needed */
     </ul>
 </nav>
 
-<!-- Contact Form -->
-<div class="form-container">
-<div class="test-result-voucher-container">
-        <p>Test result voucher</p>
-<div class="test-result-voucher-cost">
-        <p><b>$3.99</b></p>
-    </div>
-    </div>
-<div class="transaction-fees-container">
-        <p>Transaction fees</p>
-<div class="transaction-fees-cost">
-        <p><b>$0.89</b></p>
-    </div>
-    </div>
-        <div class="total-container">
-        <h3>Total:</h3>
-<div class="total-cost">
-        <h3>$4.88<h3>
-    </div>
-    </div>
-    </div>
-
-<!-- Contact Form -->
-    <div class="form-container">
-        <h3>Contact</h3>
-        <form id="contactForm">
-            <input type="email" name="email" placeholder="Email" required>
-        </form>
-<div class="email-prompt">
-        <p>Test results will be sent to provided email</p>
-    </div>
-    </div>
-
-   <!-- Credit Card Form -->
-    <div class="form-container">
-        <div class="credit-card-border"><h3 class="credit-card-border-text">Debit or Credit Card</h3>
-<div class="credit-card-icons">
-            <img src="card0.svg" alt="Card Icon 0">
-            <img src="card1.svg" alt="Card Icon 1">
-            <img src="card2.svg" alt="Card Icon 2">
-        </div>
+<div class="page-content">
+    <div class="test-form-container">
+        <div class="test-form">
+            <h1>Pre-Dating Test</h1>
+            <form action="submit_test.php" method="POST">
+               <button id="submitBtn" type="button">Submit</button>
+            </form>
+<div class="new-error-container">
+    <div class="new-error-message" style="display: none;">Please answer test questions.</div>
 </div>
-        <form id="creditCardForm">
-            <input type="text" name="cardNumber" placeholder="Card Number" required>
-            <input type="text" name="expirationDate" placeholder="Expiration Date (MM/YY)" required>
-            <input type="text" name="cvc" placeholder="CVC" required>
-            <input type="text" name="cardName" placeholder="Name on Card" required>
-        </form>
+</div>
+        </div>
     </div>
+</div>
 
-    <!-- Billing Address Form -->
-    <div class="form-container">
-        <h3>Billing Address</h3>
-        <form id="billingAddressForm">
-            <input type="text" name="addressLine1" placeholder="Address Line 1" required>
-            <input type="text" name="addressLine2" placeholder="Address Line 2">
-            <input type="text" name="city" placeholder="City" required>
-            <input type="text" name="state" placeholder="State" required>
-            <input type="text" name="zipCode" placeholder="Zip Code" required>
-            <button id="paymentBtn" type="button">Complete Payment</button>
-<p class="moonpay-quota">Secured by <b>Moonpay</b></p>
-        </form>
+    <footer class="footer">
+    <div class="footer-content">
+        <a href="https://www.facebook.com/tlhcounselling/" target="_blank">
+            <img src="footer0.svg" alt="Footer Image 0">
+        </a>
+        <a href="https://www.instagram.com/tlhcounselling/" target="_blank">
+            <img src="footer1.svg" alt="Footer Image 1">
+        </a>
     </div>
+    <p style="text-align: center;">©2019 by The Lighthouse Counselling Pte Ltd</p>
+</footer>
 
 <script>
     // Custom easing function: easeInOutCubic
@@ -702,36 +517,6 @@ height: 25px; /* Set the height as needed */
         localStorage.setItem('submissionStatus', 'Submitted');
         // Redirect the user to testpayment.html
         window.location.href = 'testpayment.html';
-    });
-</script>
-
-<script>
-    document.getElementById('submitBtn').addEventListener('click', function() {
-        // Get data from all three forms
-        var contactFormData = new FormData(document.getElementById('contactForm'));
-        var creditCardFormData = new FormData(document.getElementById('creditCardForm'));
-        var billingAddressFormData = new FormData(document.getElementById('billingAddressForm'));
-        
-        // Combine all form data into one object
-        var formData = {};
-        for (var pair of contactFormData.entries()) {
-            formData[pair[0]] = pair[1];
-        }
-        for (var pair of creditCardFormData.entries()) {
-            formData[pair[0]] = pair[1];
-        }
-        for (var pair of billingAddressFormData.entries()) {
-            formData[pair[0]] = pair[1];
-        }
-        
-        // Convert form data to JSON
-        var jsonData = JSON.stringify(formData);
-        
-        // Store JSON data in localStorage
-        localStorage.setItem('formData', jsonData);
-        
-        // Redirect to backrooms.html
-        window.location.href = 'backrooms.html';
     });
 </script>
 
