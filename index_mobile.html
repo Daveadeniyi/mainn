@@ -390,6 +390,15 @@ resize: none; /* Disable resizing */
 </button>
 </nav>
 
+<div class="side-menu" id="sideMenu">
+        <ul class="navbar-links">
+            <li><a href="#" onclick="scrollToSection('#philosophy')">About</a></li>
+            <li><a href="#" onclick="scrollToSection('#services')">Services</a></li>
+            <li><a href="#" onclick="scrollToSection('#contact')">Contact</a></li>
+            <li><a href="test.html" class="take-test-btn">Take the Test</a></li>
+        </ul>
+    </div>
+    
     <div class="image-container">
         <img src="therapy0.jpg" alt="Therapy Image">
         <h1 class="image-text">Welcome to Lighthouse<br>Couple Insights.</h1>
@@ -497,6 +506,13 @@ resize: none; /* Disable resizing */
         <button onclick="rejectCookies()">Reject</button>
     </div>
 
+<script>
+        function toggleMenu() {
+            var sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('open');
+        }
+    </script>
+    
 <script>
         // Check if the user has already made a choice about cookies
         window.onload = function() {
