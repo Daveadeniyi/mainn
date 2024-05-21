@@ -8,66 +8,74 @@
     <link rel="icon" href="lighthouse.svg" type="image/svg+xml">
     <style>
         body {
-            margin: 0;
             font-family: 'Calibri', sans-serif;
             background-color: #fff;
         }
 
         .navbar {
-            background-color: #fff;
-            border-bottom: 1px solid #ccc;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar-brand {
+    background-color: #fff;
+    border-bottom: 0.0625em solid #ccc; /* 1px to em */
+    padding: 1.5em 0.5em; /* 40px to em */
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: 'Playfair Display', serif; /* Change the font family */
 }
 
-        .navbar-brand img {
-            height: 40px;
-            margin-right: 10px;
-        }
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em; /* 24px to em */
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+}
 
-        .navbar-links {
-            display: flex;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            margin-left: auto;
-        }
+.navbar-brand {
+  font-size: 1em;
+}
 
-        .navbar-links li {
-            margin-right: 20px;
-        }
+.navbar-brand img {
+    height: 1.5em; /* 40px to em */
+}
 
-        .navbar-links li a {
-            text-decoration: none;
-            color: #333;
-        }
+.navbar-hamburger {
+    display: flex;
+    height: 2.5em; /* 40px to em */
+}
 
-        .take-test-btn {
-            background-color: #bfefff;
-            padding: 12px 20px;
-            border-radius: 20px;
-            border: none;
-            cursor: pointer;
-            color: #333;
-            font-weight: bold;
-            text-decoration: none;
-            font-family: 'Calibri', sans-serif;
-        }
+.navbar-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+}
 
-        .take-test-btn:hover {
-            background-color: #a9e2ff;
-        }
+.navbar-links li {
+    margin-right: 1.25em; /* 20px to em */
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.take-test-btn {
+    background-color: #bfefff;
+    padding: 0.75em 1.25em; /* 12px 20px to em */
+    border-radius: 1.25em; /* 20px to em */
+    border: none;
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Calibri', sans-serif;
+}
+
+.take-test-btn:hover {
+    background-color: #a9e2ff;
+}
+
 
         .image-container {
             position: relative;
@@ -374,14 +382,11 @@ resize: none; /* Disable resizing */
     <nav class="navbar">
     <div class="navbar-brand" onclick="window.location.href='index.html';">
         <img src="lighthouse.svg" alt="Lighthouse Logo">
-        LIGHTHOUSE COUPLE INSIGHTS
+        <div class="navbar-brand-text">LIGHTHOUSE COUPLE INSIGHTS</div>
     </div>
-    <ul class="navbar-links">
-        <li><a href="#" onclick="scrollToSection('#philosophy')">About</a></li>
-        <li><a href="#" onclick="scrollToSection('#services')">Services</a></li>
-        <li><a href="#" onclick="scrollToSection('#contact')">Contact</a></li>
-        <li><a href="test.html" class="take-test-btn">Take the Test</a></li>
-    </ul>
+<button onclick="toggleMenu()">
+    <img class="navbar-hamburger" src="hamburger.svg" alt="Menu">
+</button>
 </nav>
 
     <div class="image-container">
