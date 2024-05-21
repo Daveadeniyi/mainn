@@ -44,6 +44,44 @@
     height: 2.5em; /* 40px to em */
 }
 
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially hidden */
+    height: 100%;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.side-menu.open {
+    right: 0; /* Slide in when open */
+}
+
+/* Additional styles for the menu items */
+.side-menu .navbar-links {
+    padding: 20px;
+}
+
+.side-menu .navbar-links li {
+    margin-bottom: 15px;
+}
+
+.side-menu .navbar-links li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.side-menu .navbar-links li a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+        
 .navbar-links {
     display: flex;
     list-style-type: none;
