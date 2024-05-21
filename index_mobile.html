@@ -423,16 +423,17 @@ resize: none; /* Disable resizing */
         <img src="lighthouse.svg" alt="Lighthouse Logo">
         <div class="navbar-brand-text">LIGHTHOUSE COUPLE INSIGHTS</div>
     </div>
-<button onclick="toggleMenu()">
+<button id="hamburgerButton">
     <img class="navbar-hamburger" src="hamburger.svg" alt="Menu">
 </button>
 </nav>
 
-<div class="side-menu" id="sideMenu">
+<!-- Side hamburger menu -->
+    <div class="side-menu" id="sideMenu">
         <ul class="navbar-links">
-            <li><a href="#" onclick="scrollToSection('#philosophy')">About</a></li>
-            <li><a href="#" onclick="scrollToSection('#services')">Services</a></li>
-            <li><a href="#" onclick="scrollToSection('#contact')">Contact</a></li>
+            <li><a href="#" data-target="#philosophy">About</a></li>
+            <li><a href="#" data-target="#services">Services</a></li>
+            <li><a href="#" data-target="#contact">Contact</a></li>
             <li><a href="test.html" class="take-test-btn">Take the Test</a></li>
         </ul>
     </div>
@@ -545,9 +546,34 @@ resize: none; /* Disable resizing */
     </div>
 
 <script>
-        function toggleMenu() {
+        document.addEventListener('DOMContentLoaded', function() {
+            var hamburgerButton = document.getElementById('hamburgerButton');
             var sideMenu = document.getElementById('sideMenu');
-            sideMenu.classList.toggle('open');
+
+            hamburgerButton.addEventListener('click', function() {
+                sideMenu.classList.toggle('open');
+            });
+
+            var menuLinks = document.querySelectorAll('.navbar-links a[data-target]');
+            menuLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var targetId = link.getAttribute('data-target');
+                    scrollToSection(targetId);
+                    sideMenu.classList.remove('open');
+                });
+            });
+        });
+
+        function scrollToSection(sectionId) {
+            var section = document.querySelector(sectionId);
+            var navbarHeight = document.querySelector('.navbar').offsetHeight;
+            var sectionPosition = section.offsetTop - navbarHeight;
+
+            window.scrollTo({
+                top: sectionPosition,
+                behavior: 'smooth'
+            });
         }
     </script>
     
