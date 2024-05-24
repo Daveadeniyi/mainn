@@ -14,27 +14,25 @@
         }
 
         .navbar {
-            background-color: #fff;
-            border-bottom: 1px solid #ccc;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar-brand {
+    background-color: #fff;
+    padding: 1.5em 1.25em; /* 40px to em */
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: 'Playfair Display', serif; /* Change the font family */
 }
 
-        .navbar-brand img {
-            height: 40px;
-            margin-right: 10px;
-        }
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1em; /* 24px to em */
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand img {
+    height: 1.5em; /* 40px to em */
+}
 
         .navbar-links {
             display: flex;
@@ -146,6 +144,19 @@
             font-size: 20px;
             line-height: 1.5;
             color: #333;
+        }
+
+        .learn-more {
+            display: inline-block;
+            padding: 0.7em 1.5em;
+            border: 3px solid hsl(17 50% 66% / 1);
+            border-radius: 15em;
+            background-color: hsl(17 50% 66% / 1);
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 1.2em;
+            letter-spacing: 0.1em;
         }
 
         .page-content {
@@ -369,14 +380,6 @@ resize: none; /* Disable resizing */
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-<script>
-    // Check if the user agent indicates a mobile device
-    if (/Mobi|Android/i.test(navigator.userAgent)) {
-        // Redirect the user to the mobile version of the website
-        window.location.href = "index_mobile.html";
-    }
-</script>
-    
 </head>
 <body>
     <nav class="navbar">
@@ -395,7 +398,7 @@ resize: none; /* Disable resizing */
     <div class="image-container">
         <img src="therapy0.jpg" alt="Therapy Image">
         <h1 class="image-text">Welcome to Lighthouse<br>Couple Insights.</h1>
-        <h4 class="sub-heading">Unlock personalized pre-dating guidance, available either in-person<br>or from the convenience of your home,<br>ensuring a smoother journey towards meaningful connections.</h4>
+        <h4 class="sub-heading">Unlock personalized dating guidance, available either in-person<br>or from the convenience of your home,<br>ensuring a smoother journey towards meaningful connections.</h4>
     </div>
 
     <div id="services" class="services-container">
@@ -421,7 +424,10 @@ resize: none; /* Disable resizing */
                 <img src="services3.svg" alt="Marriage Counseling SVG" style="width: 25%;">
                 <h3>Marriage Counseling</h3>
                 <p>Nurture and revitalize your marriage with our specialized counseling sessions, focused on fostering understanding and harmony.</p>
-            </div>
+<div class="service">
+                 <a href="#" onclick="scrollToSection('#contact')" class="learn-more">LEARN MORE</a>
+            </div>            
+</div>
         </div>
     </div>
 
@@ -495,51 +501,7 @@ resize: none; /* Disable resizing */
 
 <div class="cookie-banner" id="cookieBanner">
         <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-        <button onclick="acceptCookies()">Accept</button>
-        <button onclick="rejectCookies()">Reject</button>
     </div>
-
-<script>
-        // Check if the user has already made a choice about cookies
-        window.onload = function() {
-            if (!getCookie("cookiesAccepted")) {
-                document.getElementById("cookieBanner").style.display = "block";
-            }
-        }
-
-        function acceptCookies() {
-            setCookie("cookiesAccepted", "true", 365);
-            document.getElementById("cookieBanner").style.display = "none";
-        }
-
-        function rejectCookies() {
-            setCookie("cookiesAccepted", "false", 365);
-            document.getElementById("cookieBanner").style.display = "none";
-        }
-
-        // Set a cookie
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
-
-        // Get a cookie
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
-</script>
 
 <script>
     // Custom easing function: easeInOutCubic

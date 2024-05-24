@@ -14,27 +14,25 @@
         }
 
         .navbar {
-            background-color: #fff;
-            border-bottom: 1px solid #ccc;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar-brand {
+    background-color: #fff;
+    padding: 1.5em 1.25em; /* 40px to em */
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: 'Playfair Display', serif; /* Change the font family */
 }
 
-        .navbar-brand img {
-            height: 40px;
-            margin-right: 10px;
-        }
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1em; /* 24px to em */
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand img {
+    height: 1.5em; /* 40px to em */
+}
 
         .navbar-links {
             display: flex;
@@ -80,10 +78,8 @@
     .test-form {
         width: 80%; /* Adjust width as needed */
         max-width: 800px; /* Adjust max-width as needed */
-        border: 0px solid #333; /* Add border with color */
         padding: 20px; /* Add padding to improve appearance */
-        border-radius: 50px; /* Add curved edges */
-        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5); /* Add shadow */
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2); /* Add shadow */
     }
 
 .test-form button[type="submit"] {
@@ -101,9 +97,6 @@
     margin-top: 50px; /* Add margin to separate from the previous element */
 }
 
-.test-form button[type="submit"]:hover {
-    background-color: #555;
-}
         .image-container {
             position: relative;
             text-align: center;
@@ -185,7 +178,7 @@
 
         .page-content {
             background-color: #fff;
-            padding: 20px;
+            padding: 1em;
         }
 
         .testimonial-text {
@@ -312,16 +305,15 @@
 
         .footer {
             background-color: #bfefff;
-            padding: 50px 0;
+            padding: 3em 0;
             text-align: center;
         }
 
         .footer-content {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     align-items: center; /* Align items vertically in the center */
     max-width: 70px; /* Optional: Adjust the maximum width to control spacing */
-    margin: 0 auto; /* Optional: Center the footer content */
 }
 
 .footer-content img {
@@ -435,13 +427,13 @@
                     <input type="radio" id="goal1_1" name="goal1" value="1">
                     <label for="goal1_1">1</label>
                     <input type="radio" id="goal1_2" name="goal1" value="2">
-                    <label for="goal2">2</label>
+                    <label for="goal1_2">2</label>
                     <input type="radio" id="goal1_3" name="goal1" value="3">
-                    <label for="goal3">3</label>
+                    <label for="goal1_3">3</label>
                     <input type="radio" id="goal1_4" name="goal1" value="4">
-                    <label for="goal4">4</label>
-                    <input type="radio" id="goal1_5" name="goa1" value="5">
-                    <label for="goal5">5</label>
+                    <label for="goal1_4">4</label>
+                    <input type="radio" id="goal1_5" name="goal1" value="5">
+                    <label for="goal1_5">5</label>
                 </div>
 <h3>Rate the importance of qualities you're looking for in a partner.</h3>
                   <div class="rating">
@@ -708,8 +700,11 @@
         </a>
     </div>
     <p style="text-align: center;">©2019 by The Lighthouse Counselling Pte Ltd</p>
+    <p style="text-align: center;">
+        <a href="terms-of-service.html" style="color: #333; text-decoration: none;">Terms of Service</a> | 
+        <a href="privacy-policy.html" style="color: #333; text-decoration: none;">Privacy Policy</a>
+    </p>
 </footer>
-
 <script>
     // Custom easing function: easeInOutCubic
     // Adapted from https://easings.net/#easeInOutCubic

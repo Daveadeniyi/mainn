@@ -15,8 +15,7 @@
 
         .navbar {
     background-color: #fff;
-    border-bottom: 0.0625em solid #ccc; /* 1px to em */
-    padding: 1.5em 0.5em; /* 40px to em */
+    padding: 1.5em 1.25em; /* 40px to em */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,14 +24,10 @@
 .navbar-brand {
     display: flex;
     align-items: center;
-    font-size: 1.5em; /* 24px to em */
+    font-size: 1em; /* 24px to em */
     font-weight: bold;
     cursor: pointer;
     font-family: 'Playfair Display', serif;
-}
-
-.navbar-brand {
-  font-size: 1em;
 }
 
 .navbar-brand img {
@@ -44,44 +39,48 @@
     height: 2.5em; /* 40px to em */
 }
 
-.side-menu {
+.navbar-hamburger-close {
+    display: flex;
+    height: 2em; /* 40px to em */
+}
+
+.navbar-hamburger-close-container {
+    display: flex;
+    justify-content: end;
+}
+
+.hamburger-menu {
     position: fixed;
     top: 0;
-    right: -300px; /* Initially hidden */
+    right: -70%; /* Initially hidden off-screen */
+    width: 70%; /* Adjust width as needed */
     height: 100%;
-    width: 300px;
-    background-color: #fff;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease; /* Smooth transition */
-    z-index: 1000; /* Ensure it's above other content */
+    background-color: #fff; /* Background color */
+    z-index: 999; /* Make sure it is on top */
+    padding: 2em;
+    box-sizing: border-box;
+    transition: right 0.3s ease-in-out; /* Add transition for sliding effect */
 }
 
-.side-menu.open {
-    right: 0; /* Slide in when open */
+.hamburger-menu.open {
+    right: 0; /* Slide in to this position */
 }
 
-/* Additional styles for the menu items */
-.side-menu .navbar-links {
-    padding: 20px;
+.hamburger-menu ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.side-menu .navbar-links li {
-    margin-bottom: 15px;
+.hamburger-menu ul li {
+    margin: 1.5em 0;
 }
 
-.side-menu .navbar-links li a {
-    color: #333;
+.hamburger-menu ul li a {
     text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #333;
+    font-size: 1.25em; /* Font size */
 }
 
-.side-menu .navbar-links li a:hover {
-    color: #007bff; /* Change color on hover */
-}
-
-        
 .navbar-links {
     display: flex;
     list-style-type: none;
@@ -120,127 +119,143 @@
             position: relative;
             text-align: center;
             background-color: #bfefff;
+            max-width: 100%;
+            overflow: hidden;
         }
 
         .image-container img {
-            width: 100%;
+           width: 350%;
         }
 
         .image-text {
             position: absolute;
             bottom: 25%;
-            left: 50%;
+            left: 40%;
             transform: translate(-50%, 0%);
-            width: calc(100% - 80px);
             color: white;
-            font-size: 72px;
+            font-size: 3em;
             font-weight: bold;
-            line-height: 1.2;
+            line-height: 1;
             text-align: left;
-            margin: 0 40px;
         }
 
         .sub-heading {
             position: absolute;
-            bottom: 20%;
+            bottom: 13%;
             left: 50%;
             transform: translate(-50%, 50%);
-            width: calc(100% - 80px);
             color: white;
-            font-size: 28px;
+            font-size: 1.5em;
             font-weight: normal;
-            line-height: 1.4;
+            line-height: 1;
             text-align: left;
-            margin: 0 40px;
+            width: 85%;
         }
 
         .services-container {
             background-color: #bfefff;
-            padding: 60px 20%;
-            margin-bottom: 40px;
+            padding: 1.5em 20%;
         }
 
         .our-services {
-            font-size: 72px;
+            font-size: 2.5em;
             font-weight: bold;
             text-align: center;
             color: #333;
+            margin-top: 1.5em;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 1.5em;
         }
 
         .services-grid {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
+            display: grid;
+            justify-items: center;
         }
 
         .service {
-            width: 22%;
-            padding: 20px;
-            border-radius: 10px;
             background-color: #bfefff;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 2em;
         }
 
         .service h3 {
-            font-size: 30px;
+            font-size: 2em;
             font-weight: normal;
-            margin-bottom: 10px;
+            margin-bottom: 0.1em;
+            margin-top: 1em;
             color: #333;
         }
 
+.service img {
+            width:40%;
+        }
+
         .service p {
-            font-size: 20px;
-            line-height: 1.5;
+            font-size: 1.2em;
+            line-height: 1.3;
             color: #333;
+        }
+
+        .learn-more {
+            display: inline-block;
+            padding: 0.7em 1.5em;
+            border: 3px solid hsl(17 50% 66% / 1);
+            border-radius: 15em;
+            background-color: hsl(17 50% 66% / 1);
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s, border-color 0.3s;
+            font-size: 1.2em;
+            letter-spacing: 0.1em;
         }
 
         .page-content {
             background-color: #fff;
-            padding: 20px;
+            padding: 1.5em 10%;
         }
 
         .testimonial-text {
-            font-size: 40px;
+            font-size: 1.3em;
             line-height: 1.5;
             color: #333;
             text-align: center;
-            margin-top: 50px;
+            margin-top: 3em;
+            margin-bottom: 0.1em;
             font-style: italic;
             font-weight: bold;
         }
 
         .additional-content {
             background-color: #fff;
-            padding: 60px 40px;
+            padding: 1.5em 10%;
             text-align: center;
         }
 
         .additional-btn {
             display: inline-block;
-            padding: 15px 30px;
-            border: 2px solid #fff;
-            border-radius: 30px;
-            background-color: #bfefff;
-            color: #333;
-            font-weight: bold;
+            padding: 0.6em 1.2em;
+            border: 3px solid hsl(17 50% 66% / 1);
+            border-radius: 15em;
+            background-color: hsl(17 50% 66% / 1);
+            color: #fff;
             text-decoration: none;
             transition: background-color 0.3s, border-color 0.3s;
-            font-size: 24px;
-        }
-
-        .additional-btn:hover {
-            background-color: #fff;
-            border-color: #bfefff;
+            font-size: 1.2em;
+            letter-spacing: 0.1em
         }
 
         .philosophy-text {
-            font-size: 30px;
+            font-size: 1.2em;
+            line-height: 1.3;
             font-weight: normal;
             color: #333;
             text-align: center;
             margin-top: 20px;
-            line-height: 1.4;
+        }
+
+        .contact-appointment-container {
+            background-color: #fff;
         }
 
         .contact-text {
@@ -253,24 +268,23 @@
         }
 
         .contact-details {
-            font-size: 24px;
-            line-height: 1;
+            font-size: 1.2em;
+            line-height: 1.2;
+            text-align: left;
         }
 
         .contact-info {
             text-align: center;
+            padding: 1.5em 6%;
         }
 
       .appointment-form-container {
     background-color: #bfefff;
+    padding: 1em 4%;
 }
 
 .appointment-form {
-    padding: 40px;
-    border-radius: 10px;
-    margin-top: 40px;
-    max-width: 600px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the form horizontally */
+    padding: 2em;
     background-color: #bfefff; /* Match the background color of the container */
 }
 
@@ -310,15 +324,11 @@ resize: none; /* Disable resizing */
     padding: 15px 30px;
     border: none;
     border-radius: 5px;
-    background-color: #333;
+    background-color: #d4967d;
     color: #fff;
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.appointment-form button[type="button"]:hover {
-    background-color: #555;
 }
 
 .popup {
@@ -330,7 +340,7 @@ resize: none; /* Disable resizing */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            z-index: 9999;
+            z-index: 9998;
             display: none;
         }
 
@@ -351,22 +361,21 @@ resize: none; /* Disable resizing */
 }
 
 .error-message {
-    font-size: 16px; /* Adjust font size as needed */
-    color: red; /* Adjust color as needed */
+    font-size: 1em;
+    color: red;
 }
 
         .footer {
             background-color: #bfefff;
-            padding: 50px 0;
+            padding: 3em 0;
             text-align: center;
         }
 
         .footer-content {
-    display: flex;
+    display: grid;
     justify-content: space-between;
     align-items: center; /* Align items vertically in the center */
     max-width: 70px; /* Optional: Adjust the maximum width to control spacing */
-    margin: 0 auto; /* Optional: Center the footer content */
 }
 
 .footer-content img {
@@ -378,8 +387,8 @@ resize: none; /* Disable resizing */
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: auto;
-    max-width: 90%;
+    width: 80%;
+    max-width: 80%;
     background-color: #ffffff; /* Dark background color */
     padding: 20px;
     border-radius: 10px;
@@ -396,113 +405,152 @@ resize: none; /* Disable resizing */
     line-height: 1.5;
 }
 
-.cookie-banner button {
-    background-color: #333; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+ /* Apply initial styles to the cookie banner */
+        .cookie-banner {
+            /* Set initial position at the bottom */
+            bottom: -100px;
+            /* Set initial opacity to 0 */
+            opacity: 0;
+            /* Add transition for smooth animation */
+            transition: bottom 1s ease-out, opacity 1s ease-out;
+        }
 
-.cookie-banner button:hover {
-    background-color: #1d1d24; /* Darker shade on hover */
-}
+        /* Define the fade-up animation */
+        @keyframes fadeUp {
+            from {
+                bottom: -100px;
+                opacity: 0;
+            }
+            to {
+                bottom: 20px; /* Adjust position from bottom as needed */
+                opacity: 1;
+            }
+        }
+
+        /* Define the fade-down animation */
+        @keyframes fadeDown {
+            from {
+                bottom: 20px; /* Adjust position from bottom as needed */
+                opacity: 1;
+            }
+            to {
+                bottom: -100px;
+                opacity: 0;
+            }
+        }
 
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-
 </head>
 <body>
+
+<script>
+function openHamburgerMenu() {
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    // Always set the display of the hamburger menu to block
+    hamburgerMenu.style.display = 'block';
+}
+
+function closeHamburgerMenu() {
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    // Always set the display of the hamburger menu to none
+    hamburgerMenu.style.display = 'none';
+}
+</script>
+
     <nav class="navbar">
     <div class="navbar-brand" onclick="window.location.href='index.html';">
         <img src="lighthouse.svg" alt="Lighthouse Logo">
         <div class="navbar-brand-text">LIGHTHOUSE COUPLE INSIGHTS</div>
     </div>
-<button id="hamburgerButton">
-    <img class="navbar-hamburger" src="hamburger.svg" alt="Menu">
-</button>
+    <div onclick="openHamburgerMenu()">
+        <img class="navbar-hamburger" src="hamburger.svg" alt="Menu">
+    </div>
 </nav>
 
-<!-- Side hamburger menu -->
-    <div class="side-menu" id="sideMenu">
-        <ul class="navbar-links">
-            <li><a href="#" data-target="#philosophy">About</a></li>
-            <li><a href="#" data-target="#services">Services</a></li>
-            <li><a href="#" data-target="#contact">Contact</a></li>
-            <li><a href="test.html" class="take-test-btn">Take the Test</a></li>
-        </ul>
+<!-- Add the hamburger menu -->
+<div id="hamburgerMenu" class="hamburger-menu">
+        
+    <ul>
+<div onclick="closeHamburgerMenu()" class="navbar-hamburger-close-container">
+        <img class="navbar-hamburger-close" src="close.svg" alt="Menu">
     </div>
-    
-    <div class="image-container">
+        <li><a href="#" onclick="scrollToSection('#philosophy'); closeHamburgerMenu();">About</a></li>
+        <li><a href="#" onclick="scrollToSection('#services'); closeHamburgerMenu();">Services</a></li>
+        <li><a href="#" onclick="scrollToSection('#contact'); closeHamburgerMenu();">Contact</a></li>
+    </ul>
+</div>
+
+<div class="image-container">
         <img src="therapy0.jpg" alt="Therapy Image">
         <h1 class="image-text">Welcome to Lighthouse<br>Couple Insights.</h1>
-        <h4 class="sub-heading">Unlock personalized pre-dating guidance, available either in-person<br>or from the convenience of your home,<br>ensuring a smoother journey towards meaningful connections.</h4>
+        <h4 class="sub-heading">Unlock personalized dating guidance, available either in-person or from the convenience of your home, ensuring a smoother journey towards meaningful connections.</h4>
     </div>
 
-    <div id="services" class="services-container">
+ <div id="services" class="services-container">
         <h3 class="our-services">Our Services</h3>
 
         <div class="services-grid">
             <div class="service">
-                <img src="services0.svg" alt="Dating Coaching SVG" style="width: 25%;">
+                <img src="services0.svg" alt="Dating Coaching SVG">
                 <h3>Dating Coaching</h3>
-                <p> <br>Empower yourself with personalized coaching sessions aimed at enhancing your dating skills and confidence.</p>
+                <p>Empower yourself with personalized coaching sessions aimed at enhancing your dating skills and confidence.</p>
             </div>
             <div class="service">
-                <img src="services1.svg" alt="Pre-Dating Test SVG" style="width: 25%;">
+                <img src="services1.svg" alt="Pre-Dating Test SVG">
                 <h3>Pre-Dating Test</h3>
                 <p> <br>Take our comprehensive pre-dating test designed to analyze your compatibility and readiness for a meaningful relationship.</p>
             </div>
             <div class="service">
-                <img src="services2.svg" alt="Relationship Counseling SVG" style="width: 25%;">
+                <img src="services2.svg" alt="Relationship Counseling SVG">
                 <h3>Relationship Counseling</h3>
                 <p>Benefit from our expert relationship counseling sessions, tailored to address specific issues and strengthen your connection.</p>
             </div>
             <div class="service">
-                <img src="services3.svg" alt="Marriage Counseling SVG" style="width: 25%;">
+                <img src="services3.svg" alt="Marriage Counseling SVG">
                 <h3>Marriage Counseling</h3>
                 <p>Nurture and revitalize your marriage with our specialized counseling sessions, focused on fostering understanding and harmony.</p>
+            </div>
+            <div class="service">
+                 <a href="#" onclick="scrollToSection('#contact')" class="learn-more">LEARN MORE</a>
             </div>
         </div>
     </div>
 
-    <div class="page-content">
+<div class="page-content">
         <div class="testimonial-text">
-            <p>"Can't express how grateful we are for Sarah's guidance<br> in our sessions. She consistently offers fresh insights and<br> perspectives on the challenges we face as a couple.<br> Sarah fosters an environment of openness and honesty,<br> where we feel understood and supported.<br> If you're navigating through marital issues and<br> need someone to talk to, Sarah is the one to call."</p>
+            <p>"Can't express how grateful we are for Sarah's guidance in our sessions. She consistently offers fresh insights and perspectives on the challenges we face as a couple. Sarah fosters an environment of openness and honesty, where we feel understood and supported. If you're navigating through marital issues and need someone to talk to, Sarah is the one to call."</p>
         </div>
 
         <!-- New div for additional content -->
         <div class="additional-content">
-            <a href="test.html" class="additional-btn">Take Pre-Dating Test</a>
+            <a href="test.html" class="additional-btn">TAKE PRE-DATING TEST</a>
 
         </div>
     </div>
 
-    <div id="philosophy" class="additional-content">
+<div id="philosophy" class="additional-content">
         <h3 class="our-services">Our Philosophy</h3>
-        <p class="philosophy-text">When life feels chaotic and confusing, we're here to help guide you towards peace and<br> transformation. Our goal is to support your journey of personal growth and change.<br> Through counseling, we walk alongside you as you navigate through frustration, anxiety, depression,<br> and hopelessness, helping you develop a clear plan for a better life with tools learned in our sessions.<br> We provide a safe and confidential environment where you can build trust and confidence. Our<br> diverse team is ready to support you on whatever path you are on. If life has you feeling down, Reach out!</p>
+        <p class="philosophy-text">When life feels chaotic and confusing, we're here to help guide you towards peace and transformation. Our goal is to support your journey of personal growth and change. Through counseling, we walk alongside you as you navigate through frustration, anxiety, depression, and hopelessness, helping you develop a clear plan for a better life with tools learned in our sessions. We provide a safe and confidential environment where you can build trust and confidence. Our diverse team is ready to support you on whatever path you are on. If life has you feeling down, Reach out!</p>
     </div>
 
-   <div class="contact-appointment-container">
+ <div class="contact-appointment-container">
     <div id="contact" class="contact-info">
         <h3 class="our-services">Contact Us</h3>
         <p class="contact-details">
-            <span>scheduling@lighthousecoupleinsights.com</span><br>
-            <span>billing@lighthousecoupleinsights.com</span><br> <br> <br>
-            <span>314 Franklin Ave, Ste 403<br> Berlin, MD 21811<br> (667) 288-1486</span><br> <br> <br>
-            <span>1485 Still Meadow Blvd, Unit #3<br> Salisbury, MD 21804<br> (410) 973-2211</span><br> <br> <br>
-            <span>30265 Commerce Drive, Ste 205<br> Millsboro, DE 19966<br> (302) 245-8722</span><br>
+            <span>scheduling@lighthousecoupleinsights.online</span><br>
+            <span>billing@lighthousecoupleinsights.online</span><br> <br> <br>
+            <span><b>Our Locations</b><br> <br>314 Franklin Ave, Ste 403<br> Berlin, MD 21811<br> (667) 288-1486</span><br> <br>
+            <span>1485 Still Meadow Blvd, Unit #3<br> Salisbury, MD 21804<br> (410) 973-2211</span><br> <br>
+            <span>30265 Commerce Drive, Ste 205<br> Millsboro, DE 19966<br> (302) 245-8722</span><br> <br> <br>
+            <span><b>Hours</b><br> <br>Monday-Friday<br>8am-7pm</span>
         </p>
     </div>
 
    <div class="appointment-form-container">
     <div class="appointment-form">
-        <h3>Schedule an Appointment</h3>
+        <h3>Make an Appointment</h3>
         <form id="appointmentForm" action="submit_appointment.php" method="POST">
             <input type="text" name="name" placeholder="Name" required><br>
             <input type="tel" name="phone" placeholder="Phone" required><br>
@@ -517,7 +565,7 @@ resize: none; /* Disable resizing */
 </div>
       </div>
 
- <div id="popup" class="popup">
+<div id="popup" class="popup">
         <img src="submit0.svg" alt="Submit Image">
         <p class="popup-text">Sent</p>
     </div>
@@ -541,42 +589,8 @@ resize: none; /* Disable resizing */
 
 <div class="cookie-banner" id="cookieBanner">
         <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-        <button onclick="acceptCookies()">Accept</button>
-        <button onclick="rejectCookies()">Reject</button>
     </div>
 
-<script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var hamburgerButton = document.getElementById('hamburgerButton');
-            var sideMenu = document.getElementById('sideMenu');
-
-            hamburgerButton.addEventListener('click', function() {
-                sideMenu.classList.toggle('open');
-            });
-
-            var menuLinks = document.querySelectorAll('.navbar-links a[data-target]');
-            menuLinks.forEach(function(link) {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    var targetId = link.getAttribute('data-target');
-                    scrollToSection(targetId);
-                    sideMenu.classList.remove('open');
-                });
-            });
-        });
-
-        function scrollToSection(sectionId) {
-            var section = document.querySelector(sectionId);
-            var navbarHeight = document.querySelector('.navbar').offsetHeight;
-            var sectionPosition = section.offsetTop - navbarHeight;
-
-            window.scrollTo({
-                top: sectionPosition,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-    
 <script>
         // Check if the user has already made a choice about cookies
         window.onload = function() {
@@ -694,8 +708,32 @@ resize: none; /* Disable resizing */
             });
         });
     });
+
+
+function openHamburgerMenu() {
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    hamburgerMenu.classList.add('open'); // Add the 'open' class
+}
+
+function closeHamburgerMenu() {
+    const hamburgerMenu = document.getElementById('hamburgerMenu');
+    hamburgerMenu.classList.remove('open'); // Remove the 'open' class
+}
 </script>
 
+<script>
+    window.onload = function() {
+        // Show the cookie banner
+        document.getElementById("cookieBanner").style.bottom = "20px";
+        document.getElementById("cookieBanner").style.opacity = "1";
+
+        // Hide the cookie banner after 2 seconds
+        setTimeout(function() {
+            document.getElementById("cookieBanner").style.bottom = "-100px";
+            document.getElementById("cookieBanner").style.opacity = "0";
+        }, 3000);
+    };
+</script>
 
 </body>
 </html>

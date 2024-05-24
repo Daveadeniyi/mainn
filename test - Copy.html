@@ -391,7 +391,7 @@
 
 /* Show dot when radio button is selected */
 .rating input[type="radio"]:checked + label::after {
-    opacity: 1; /* Show dot */
+    opacity: 0; /* Show dot */
 }
 
 #submitBtn {
@@ -432,9 +432,6 @@
             <form action="submit_test.php" method="POST">
                <button id="submitBtn" type="button">Submit</button>
             </form>
-<div class="new-error-container">
-    <div class="new-error-message" style="display: none;">Please answer test questions.</div>
-</div>
 </div>
         </div>
     </div>
@@ -442,10 +439,10 @@
 
     <footer class="footer">
     <div class="footer-content">
-        <a href="https://www.facebook.com/tlhcounselling/" target="_blank">
+        <a href="https://www.facebook.com/tlhcounselling/" target="_blank" style="display: none;">
             <img src="footer0.svg" alt="Footer Image 0">
         </a>
-        <a href="https://www.instagram.com/tlhcounselling/" target="_blank">
+        <a href="https://www.instagram.com/tlhcounselling/" target="_blank" style="display: none;">
             <img src="footer1.svg" alt="Footer Image 1">
         </a>
     </div>

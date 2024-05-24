@@ -14,26 +14,25 @@
         }
 
         .navbar {
-            background-color: #fff;
-            border-bottom: 1px solid #ccc;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    background-color: #fff;
+    padding: 1.5em 1.25em; /* 40px to em */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-       .navbar-brand {
+.navbar-brand {
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 1em; /* 24px to em */
     font-weight: bold;
     cursor: pointer;
-    font-family: 'Playfair Display', serif; /* Change the font family */
+    font-family: 'Playfair Display', serif;
 }
-        .navbar-brand img {
-            height: 40px;
-            margin-right: 10px;
-        }
+
+.navbar-brand img {
+    height: 1.5em; /* 40px to em */
+}
 
         .navbar-links {
             display: flex;
@@ -341,7 +340,7 @@
 
 /* Style for custom radio buttons */
 .rating label {
-    display: inline-block;
+    display: block;
     cursor: pointer;
     margin: 0 10px;
 }
@@ -349,7 +348,6 @@
 /* Style for radio button container */
 .rating label {
     position: relative;
-    padding-left: 30px; /* Adjust according to icon size */
     font-size: 18px;
     line-height: 24px;
     color: #555;
@@ -359,8 +357,6 @@
 .rating label::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 2px; /* Adjust vertical alignment */
     width: 20px; /* Size of the radio button */
     height: 20px; /* Size of the radio button */
     border: 2px solid #ccc;
@@ -378,8 +374,6 @@
 .rating label::after {
     content: '';
     position: absolute;
-    top: 6px; /* Adjust vertical alignment */
-    left: 6px; /* Adjust horizontal alignment */
     width: 8px; /* Size of the dot */
     height: 8px; /* Size of the dot */
     border-radius: 50%; /* Rounded shape */
@@ -390,18 +384,93 @@
 
 /* Show dot when radio button is selected */
 .rating input[type="radio"]:checked + label::after {
-    opacity: 1; /* Show dot */
+    opacity: 0; /* Show dot */
 }
 
 /* Style for form containers */
 .form-container {
     max-width: 600px; /* Adjust max-width as needed */
-    margin: 0 auto; /* Center the form horizontally */
+    margin: 2em;
     background-color: #f7f7f7; /* Match the background color of the container */
-    padding: 40px; /* Add padding to the form */
+    padding: 2em; /* Add padding to the form */
     border-radius: 10px; /* Add rounded corners */
-    margin-top: 20px; /* Add margin between forms */
     border: 1px solid rgba(0, 0, 0, 0.1); /* 50% black border */
+}
+
+.credit-form-container {
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: 2em;
+    background-color: #f7f7f7; /* Match the background color of the container */
+    border-radius: 10px; /* Add rounded corners */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* 50% black border */
+}
+
+.payment-options-container {
+    max-width: 600px; /* Adjust max-width as needed */
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    background-color: #f7f7f7; /* Match the background color of the container */
+    padding-left: 0.2em; /* Add padding to the form */
+    padding-right: 1em; /* Add padding to the form */
+    border-radius: 10px; /* Add rounded corners */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* 50% black border */
+display: flex;
+justify-content: space-between;
+}
+
+.credit-card-form {
+margin: 0.5em;
+}
+
+.credit-form-container h3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left; /* Align heading to the left */
+}
+
+/* Style for input fields */
+.credit-form-container input[type="text"],
+.credit-form-container input[type="tel"],
+.credit-form-container input[type="email"],
+.credit-form-container textarea {
+    width: calc(100% - 30px); /* Adjust the width of the input fields */
+    max-width: 100%; /* Make sure the width doesn't exceed 100% */
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Match the border style and color of the container */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 18px;
+    background-color: #f7f7f7; /* Set background color */
+}
+
+/* Style for focused input fields */
+.credit-form-container input[type="text"]:focus,
+.credit-form-container input[type="tel"]:focus,
+.credit-form-container input[type="email"]:focus,
+.credit-form-container textarea:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #333; /* Change border color when focused */
+}
+
+.credit-form-container textarea {
+    height: 150px; /* Adjust height as needed */
+}
+
+.credit-form-container button[type="submit"] {
+    display: block; /* Ensure button takes full width */
+    width: 100%; /* Make button full width */
+    padding: 15px 0; /* Adjust padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .form-container h3 {
@@ -410,6 +479,11 @@
     color: #333;
     margin-bottom: 20px;
     text-align: left; /* Align heading to the left */
+}
+
+.paypal-text {
+align-content: center;
+color: #ff8787;
 }
 
 /* Style for input fields */
@@ -453,10 +527,6 @@
     transition: background-color 0.3s;
 }
 
-.form-container button[type="submit"]:hover {
-    background-color: #555;
-}
-
 .credit-card-border {
     border: 1px solid rgba(0, 0, 0, 0.1); /* Match the border style and color of the container */
     border-top-left-radius: 5px; /* Rounded top left corner */
@@ -468,14 +538,11 @@
 }
 
 .credit-card-border-text {
-    margin: 20px;
+    font-size: 1.3em;
+    margin-left: 1em;
 }
 
 .credit-card-icons {
-    position: absolute;
-    top: 50%;
-    right: 20px; /* Adjust right position as needed */
-    transform: translateY(-50%);
     display: flex;
 }
 
@@ -510,6 +577,7 @@ flex: 0 0 auto;
     align-items: center;
     margin-bottom: 0px; /* Adjust spacing between rows if needed */
 height: 25px; /* Set the height as needed */
+font-size: 1em;
 }
 
 /* Container styling to apply flexbox */
@@ -519,6 +587,7 @@ height: 25px; /* Set the height as needed */
     align-items: center;
     margin-bottom: 20px; /* Adjust spacing between rows if needed */
 height: 25px; /* Set the height as needed */
+font-size: 1em
 }
 
 /* Container styling to apply flexbox */
@@ -528,6 +597,12 @@ height: 25px; /* Set the height as needed */
     align-items: center;
     margin-bottom: 0px; /* Adjust spacing between rows if needed */
 height: 25px; /* Set the height as needed */
+font-size: 1em
+}
+
+.cc-flex {
+    display: flex;
+    align-items: center;
 }
 
 #creditCardForm input[type="text"][name="expirationDate"],
@@ -555,10 +630,6 @@ height: 25px; /* Set the height as needed */
     transition: background-color 0.3s;
 }
 
-#paymentBtn:hover {
-    background-color: #9A79BA;
-}
-
     </style>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
@@ -576,13 +647,13 @@ height: 25px; /* Set the height as needed */
 <!-- Contact Form -->
 <div class="form-container">
 <div class="test-result-voucher-container">
-        <p>Test result voucher</p>
+        <p>Test result Fees</p>
 <div class="test-result-voucher-cost">
         <p><b>$3.99</b></p>
     </div>
     </div>
 <div class="transaction-fees-container">
-        <p>Transaction fees</p>
+        <p>Processing fees</p>
 <div class="transaction-fees-cost">
         <p><b>$0.89</b></p>
     </div>
@@ -607,20 +678,28 @@ height: 25px; /* Set the height as needed */
     </div>
 
    <!-- Credit Card Form -->
-    <div class="form-container">
-        <div class="credit-card-border"><h3 class="credit-card-border-text">Debit or Credit Card</h3>
+    <div class="credit-form-container">
+<!-- Credit Card Form -->
+    <div class="payment-options-container">
+       <div class="cc-flex"><div class="rating"><form class="cc-flex-radio"><input type="radio" id="goal1_1" name="goal1" value="1"><label for="goal1_1"></label></form></div><p class="credit-card-border-text"><b>Debit or Credit Card</b></p></div>
 <div class="credit-card-icons">
             <img src="card0.svg" alt="Card Icon 0">
             <img src="card1.svg" alt="Card Icon 1">
             <img src="card2.svg" alt="Card Icon 2">
         </div>
 </div>
-        <form id="creditCardForm">
+        <form id="creditCardForm" class="credit-card-form">
             <input type="text" name="cardNumber" placeholder="Card Number" required>
             <input type="text" name="expirationDate" placeholder="Expiration Date (MM/YY)" required>
             <input type="text" name="cvc" placeholder="CVC" required>
             <input type="text" name="cardName" placeholder="Name on Card" required>
         </form>
+ <div class="payment-options-container">
+      <div class="cc-flex"><div class="rating"><form class="cc-flex-radio"><input type="radio" id="goal1_2" name="goal1" value="2"><label for="goal1_2"></label></form></div><p class="credit-card-border-text"><b>PayPal</b></p></div>
+<div class="credit-card-icons">
+           <p class="paypal-text">Currently Unavailable</p>
+        </div>
+</div>
     </div>
 
     <!-- Billing Address Form -->
@@ -633,7 +712,7 @@ height: 25px; /* Set the height as needed */
             <input type="text" name="state" placeholder="State" required>
             <input type="text" name="zipCode" placeholder="Zip Code" required>
             <button id="paymentBtn" type="button">Complete Payment</button>
-<p class="moonpay-quota">Secured by <b>Moonpay</b></p>
+<p class="moonpay-quota">Secured by <b>Moonpay</b><br>By checking out you agree with our <b>Terms of Service</b> and confirm that you have read our <b>Privacy Policy</b>.</p>
         </form>
     </div>
 
