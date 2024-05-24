@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dating Counselling | Lighthouse Couple Insights</title>
+    <title>Checkout | Lighthouse Couple Insights</title>
       <!-- Set favicon -->
     <link rel="icon" href="lighthouse.svg" type="image/svg+xml">
     <style>
@@ -11,6 +11,8 @@
             margin: 0;
             font-family: "Roboto Condensed", sans-serif;
             background-color: #fff;
+display: grid;
+justify-content: center;
         }
 
         .navbar {
@@ -361,6 +363,8 @@
     height: 20px; /* Size of the radio button */
     border: 2px solid #ccc;
     border-radius: 50%; /* Rounded shape */
+background-color: #333; /* Dot color */
+    border-color: #333; /* Selected border color */
     transition: border-color 0.3s, background-color 0.3s;
 }
 
@@ -401,6 +405,7 @@
     max-width: 600px; /* Adjust max-width as needed */
     margin: 2em;
     background-color: #f7f7f7; /* Match the background color of the container */
+    padding: 2em; /* Add padding to the form */
     border-radius: 10px; /* Add rounded corners */
     border: 1px solid rgba(0, 0, 0, 0.1); /* 50% black border */
 }
@@ -483,7 +488,7 @@ margin: 0.5em;
 
 .paypal-text {
 align-content: center;
-color: #ff8787;
+color: #ff6c6c;
 }
 
 /* Style for input fields */
@@ -551,8 +556,14 @@ color: #ff8787;
     margin-left: 10px; /* Adjust the margin between icons as needed */
 }
 
+.paypal-icon {
+    width: 4em;
+    margin-left: 1em;
+}
+
 .moonpay-quota {
 text-align: center;
+margin-top: 2em;
 }
 
 .test-result-voucher-cost {
@@ -649,7 +660,7 @@ font-size: 1em
 <!-- Contact Form -->
 <div class="form-container">
 <div class="test-result-voucher-container">
-        <p>Test result Fees</p>
+        <p>Test fees</p>
 <div class="test-result-voucher-cost">
         <p><b>$3.99</b></p>
     </div>
@@ -663,7 +674,7 @@ font-size: 1em
         <div class="total-container">
         <h3>Total:</h3>
 <div class="total-cost">
-        <h3>$4.88<h3>
+        <h3>$4.88</h3>
     </div>
     </div>
     </div>
@@ -672,7 +683,7 @@ font-size: 1em
     <div class="form-container">
         <h3>Contact</h3>
         <form id="contactForm">
-            <input type="email" name="email" placeholder="Email" required>
+            <input type="email" name="email" placeholder="Email" autocomplete="email" required>
         </form>
 <div class="email-prompt">
         <p>Test results will be sent to provided email</p>
@@ -697,7 +708,7 @@ font-size: 1em
             <input type="text" name="cardName" placeholder="Name on Card" required>
         </form>
  <div class="payment-options-container">
-      <div class="cc-flex"><div class="rating"><form class="cc-flex-radio"><input type="radio" id="goal1_2" name="goal1" value="2"><label for="goal1_2"></label></form></div><p class="credit-card-border-text"><b>PayPal</b></p></div>
+      <div class="cc-flex"><img class="paypal-icon" src="paypal.svg" alt="PayPal"></div>
 <div class="credit-card-icons">
            <p class="paypal-text">Currently Unavailable</p>
         </div>
@@ -714,7 +725,7 @@ font-size: 1em
             <input type="text" name="state" placeholder="State" required>
             <input type="text" name="zipCode" placeholder="Zip Code" required>
             <button id="paymentBtn" type="button">Complete Payment</button>
-<p class="moonpay-quota">Secured by <b>Moonpay</b><br>By checking out you agree with our <b>Terms of Service</b> and confirm that you have read our <b>Privacy Policy</b>.</p>
+<p class="moonpay-quota">Secured by <span style="color: #653c87;"><b>Moonpay</b></span><br>By checking out you agree with our <a href="terms-of-service.html" style="text-decoration: none; color: black;"><b>Terms of Service</b></a> and confirm that you have read our <a href="privacy-policy.html" style="text-decoration: none; color: black;"><b>Privacy Policy</b></a>.</p>
         </form>
     </div>
 
