@@ -9,7 +9,7 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Calibri', sans-serif;
+            font-family: "Roboto Condensed", sans-serif;
             background-color: #fff;
         }
 
@@ -52,19 +52,23 @@
         }
 
         .take-test-btn {
-            background-color: #bfefff;
+            background-color: hsl(17 50% 66% / 1);
             padding: 12px 20px;
-            border-radius: 20px;
-            border: none;
+            border: 3px solid hsl(17 50% 66% / 1);
+            border-radius: 15em;
             cursor: pointer;
-            color: #333;
+            color: #fff;
             font-weight: bold;
             text-decoration: none;
-            font-family: 'Calibri', sans-serif;
+            font-family: "Roboto Condensed", sans-serif;
+transition: background-color 0.3s, border-color 0.3s;
+letter-spacing: 0.1em;
         }
 
         .take-test-btn:hover {
-            background-color: #a9e2ff;
+            background-color: #fff;
+            border-color: hsl(17 50% 66% / 1);
+            color: #000;
         }
 
         .image-container {
@@ -79,7 +83,7 @@
 
         .image-text {
             position: absolute;
-            bottom: 25%;
+            bottom: 30%;
             left: 50%;
             transform: translate(-50%, 0%);
             width: calc(100% - 80px);
@@ -109,6 +113,8 @@
             background-color: #bfefff;
             padding: 60px 20%;
             margin-bottom: 40px;
+            display: grid;
+            justify-items: center;
         }
 
         .our-services {
@@ -157,6 +163,12 @@
             transition: background-color 0.3s, border-color 0.3s;
             font-size: 1.2em;
             letter-spacing: 0.1em;
+        }
+
+        .learn-more:hover {
+            background-color: #fff;
+            border-color: hsl(17 50% 66% / 1);
+            color: #000;
         }
 
         .page-content {
@@ -343,7 +355,7 @@ resize: none; /* Disable resizing */
     left: 50%;
     transform: translateX(-50%);
     width: auto;
-    max-width: 90%;
+    max-width: 80%;
     background-color: #ffffff; /* Dark background color */
     padding: 20px;
     border-radius: 10px;
@@ -360,24 +372,44 @@ resize: none; /* Disable resizing */
     line-height: 1.5;
 }
 
-.cookie-banner button {
-    background-color: #333; /* Button background color */
-    color: #fff; /* Button text color */
-    border: none;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+ /* Apply initial styles to the cookie banner */
+        .cookie-banner {
+            /* Set initial position at the bottom */
+            bottom: -100px;
+            /* Set initial opacity to 0 */
+            opacity: 0;
+            /* Add transition for smooth animation */
+            transition: bottom 1s ease-out, opacity 1s ease-out;
+        }
 
-.cookie-banner button:hover {
-    background-color: #1d1d24; /* Darker shade on hover */
-}
+        /* Define the fade-up animation */
+        @keyframes fadeUp {
+            from {
+                bottom: -100px;
+                opacity: 0;
+            }
+            to {
+                bottom: 20px; /* Adjust position from bottom as needed */
+                opacity: 1;
+            }
+        }
+
+        /* Define the fade-down animation */
+        @keyframes fadeDown {
+            from {
+                bottom: 20px; /* Adjust position from bottom as needed */
+                opacity: 1;
+            }
+            to {
+                bottom: -100px;
+                opacity: 0;
+            }
+        }
 
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
 <script>
@@ -431,12 +463,12 @@ resize: none; /* Disable resizing */
             <div class="service">
                 <img src="services3.svg" alt="Marriage Counseling SVG" style="width: 25%;">
                 <h3>Marriage Counseling</h3>
-                <p>Nurture and revitalize your marriage with our specialized counseling sessions, focused on fostering understanding and harmony.</p>
-<div class="service">
-                 <a href="#" onclick="scrollToSection('#contact')" class="learn-more">LEARN MORE</a>
-            </div>            
+                <p>Nurture and revitalize your marriage with our specialized counseling sessions, focused on fostering understanding and harmony.</p> 
 </div>
         </div>
+<div class="service">
+                 <a href="#" onclick="scrollToSection('#contact')" class="learn-more">LEARN MORE</a>
+            </div>           
     </div>
 
     <div class="page-content">
@@ -446,7 +478,7 @@ resize: none; /* Disable resizing */
 
         <!-- New div for additional content -->
         <div class="additional-content">
-            <a href="test.html" class="additional-btn">Take Pre-Dating Test</a>
+            <a href="test.html" class="learn-more">Take Pre-Dating Test</a>
 
         </div>
     </div>
@@ -460,21 +492,22 @@ resize: none; /* Disable resizing */
     <div id="contact" class="contact-info">
         <h3 class="our-services">Contact Us</h3>
         <p class="contact-details">
-            <span>scheduling@lighthousecoupleinsights.com</span><br>
-            <span>billing@lighthousecoupleinsights.com</span><br> <br> <br>
-            <span>314 Franklin Ave, Ste 403<br> Berlin, MD 21811<br> (667) 288-1486</span><br> <br> <br>
-            <span>1485 Still Meadow Blvd, Unit #3<br> Salisbury, MD 21804<br> (410) 973-2211</span><br> <br> <br>
-            <span>30265 Commerce Drive, Ste 205<br> Millsboro, DE 19966<br> (302) 245-8722</span><br>
+            <span>scheduling@lighthousecoupleinsights.online</span><br>
+            <span>billing@lighthousecoupleinsights.online</span><br> <br> <br>
+            <span><b>Our Locations</b><br> <br>314 Franklin Ave, Ste 403<br> Berlin, MD 21811<br> (667) 288-1486</span><br> <br>
+            <span>1485 Still Meadow Blvd, Unit #3<br> Salisbury, MD 21804<br> (410) 973-2211</span><br> <br>
+            <span>30265 Commerce Drive, Ste 205<br> Millsboro, DE 19966<br> (302) 245-8722</span><br> <br> <br>
+            <span><b>Hours</b><br> <br>Monday-Friday<br>8am-7pm</span>
         </p>
     </div>
 
    <div class="appointment-form-container">
     <div class="appointment-form">
-        <h3>Schedule an Appointment</h3>
+        <h3>Make an Appointment</h3>
         <form id="appointmentForm" action="submit_appointment.php" method="POST">
-            <input type="text" name="name" placeholder="Name" required><br>
-            <input type="tel" name="phone" placeholder="Phone" required><br>
-            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="text" name="name" placeholder="Name" autocomplete="name" required><br>
+<input type="tel" name="phone" placeholder="Phone" autocomplete="tel" required><br>
+<input type="email" name="email" placeholder="Email" autocomplete="email" required><br>
             <textarea name="message" placeholder="Type your message here..." required></textarea><br>
             <button id="submitButton" type="button">Send</button>
         </form>
@@ -588,6 +621,19 @@ resize: none; /* Disable resizing */
     });
 </script>
 
+<script>
+    window.onload = function() {
+        // Show the cookie banner
+        document.getElementById("cookieBanner").style.bottom = "20px";
+        document.getElementById("cookieBanner").style.opacity = "1";
+
+        // Hide the cookie banner after 2 seconds
+        setTimeout(function() {
+            document.getElementById("cookieBanner").style.bottom = "-100px";
+            document.getElementById("cookieBanner").style.opacity = "0";
+        }, 3000);
+    };
+</script>
 
 </body>
 </html>

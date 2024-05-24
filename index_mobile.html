@@ -107,7 +107,7 @@
     color: #333;
     font-weight: bold;
     text-decoration: none;
-    font-family: "Red Hat Display", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
 }
 
 .take-test-btn:hover {
@@ -554,9 +554,9 @@ function closeHamburgerMenu() {
     <div class="appointment-form">
         <h3>Make an Appointment</h3>
         <form id="appointmentForm" action="submit_appointment.php" method="POST">
-            <input type="text" name="name" placeholder="Name" required><br>
-            <input type="tel" name="phone" placeholder="Phone" required><br>
-            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="text" name="name" placeholder="Name" autocomplete="name" required><br>
+<input type="tel" name="phone" placeholder="Phone" autocomplete="tel" required><br>
+<input type="email" name="email" placeholder="Email" autocomplete="email" required><br>
             <textarea name="message" placeholder="Type your message here..." required></textarea><br>
             <button id="submitButton" type="button">Send</button>
         </form>

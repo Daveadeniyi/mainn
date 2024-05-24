@@ -9,7 +9,7 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Calibri', sans-serif;
+            font-family: "Roboto Condensed", sans-serif;
             background-color: #fff;
         }
 
@@ -60,7 +60,7 @@
             color: #333;
             font-weight: bold;
             text-decoration: none;
-            font-family: 'Calibri', sans-serif;
+            font-family: 'Playfair Display', serif;
         }
 
         .take-test-btn:hover {
@@ -388,23 +388,21 @@
 
 #submitBtn {
     display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid #333;
-    border-radius: 15px;
-    background-color: #333;
-    color: #fff;
-    font-size: 20px;
+    padding: 0.6em 1.2em;
+    border: 3px solid hsl(17 50% 66% / 1);
+            border-radius: 0.7em;
+            background-color: hsl(17 50% 66% / 1);
+            color: #fff;
+            text-decoration: none;
+    font-size: 1.2em;
+            letter-spacing: 0.1em
     cursor: pointer;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-#submitBtn:hover {
-    background-color: #555;
-    border-color: #555;
 }
 
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Handlee&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -422,7 +420,7 @@
         <div class="test-form">
             <h1>Pre-Dating Test</h1>
             <form action="submit_test.php" method="POST">
-                <h3>How clear are your long-term relationship goals?</h3>
+                <h4>How clear are your long-term relationship goals?</h4>
                 <div class="rating">
                     <input type="radio" id="goal1_1" name="goal1" value="1">
                     <label for="goal1_1">1</label>
@@ -435,7 +433,7 @@
                     <input type="radio" id="goal1_5" name="goal1" value="5">
                     <label for="goal1_5">5</label>
                 </div>
-<h3>Rate the importance of qualities you're looking for in a partner.</h3>
+<h4>Rate the importance of qualities you're looking for in a partner.</h4>
                   <div class="rating">
                     <input type="radio" id="goal2_1" name="goal2" value="1">
                     <label for="goal2_1">1</label>
@@ -448,7 +446,7 @@
                     <input type="radio" id="goal2_5" name="goal2" value="5">
                     <label for="goal2_5">5</label>
                 </div>
-<h3>How well do you handle conflicts in relationships? (1 being poorly, 5 being excellently)</h3>
+<h4>How well do you handle conflicts in relationships? (1 being poorly, 5 being excellently)</h4>
 <div class="rating">
                     <input type="radio" id="goal3_1" name="goal3" value="1">
                     <label for="goal3_1">1</label>
@@ -461,7 +459,7 @@
                     <input type="radio" id="goal3_5" name="goal3" value="5">
                     <label for="goal3_5">5</label>
                 </div>
-<h3>How familiar are you with your love language?</h3>
+<h4>How familiar are you with your love language?</h4>
 <div class="rating">
                     <input type="radio" id="goal4_1" name="goal4" value="1">
                     <label for="goal4_1">1</label>
@@ -474,7 +472,7 @@
                     <input type="radio" id="goal4_5" name="goal4" value="5">
                     <label for="goal4_5">5</label>
                 </div>
-<h3>Rate the importance of communication to you in a relationship.</h3>
+<h4>Rate the importance of communication to you in a relationship.</h4>
 <div class="rating">
                     <input type="radio" id="goal5_1" name="goal5" value="1">
                     <label for="goal5_1">1</label>
@@ -487,7 +485,7 @@
                     <input type="radio" id="goal5_5" name="goal5" value="5">
                     <label for="goal5_5">5</label>
                 </div>
-<h3>How comfortable are you discussing intimacy?</h3>
+<h4>How comfortable are you discussing intimacy?</h4>
 <div class="rating">
                     <input type="radio" id="goal6_1" name="goal6" value="1">
                     <label for="goal6_1">1</label>
@@ -500,7 +498,7 @@
                     <input type="radio" id="goal6_5" name="goal6" value="5">
                     <label for="goal6_5">5</label>
                 </div>
-<h3>How effectively do you deal with stress and challenges in relationships? (1 being poorly, 5 being excellently)</h3>
+<h4>How effectively do you deal with stress and challenges in relationships? (1 being poorly, 5 being excellently)</h4>
 <div class="rating">
                     <input type="radio" id="goal7_1" name="goal7" value="1">
                     <label for="goal7_1">1</label>
@@ -513,7 +511,7 @@
                     <input type="radio" id="goal7_5" name="goal7" value="5">
                     <label for="goal7_5">5</label>
                 </div>
-<h3>How influential are family and friends in your relationships?</h3>
+<h4>How influential are family and friends in your relationships?</h4>
 <div class="rating">
                     <input type="radio" id="goal8_1" name="goal8" value="1">
                     <label for="goal8_1">1</label>
@@ -526,7 +524,7 @@
                     <input type="radio" id="goal8_5" name="goal8" value="5">
                     <label for="goal8_5">5</label>
                 </div>
-<h3>Rate your comfort level in expressing affection.</h3>
+<h4>Rate your comfort level in expressing affection.</h4>
 <div class="rating">
                     <input type="radio" id="goal9_1" name="goal9" value="1">
                     <label for="goal9_1">1</label>
@@ -539,7 +537,7 @@
                     <input type="radio" id="goal9_5" name="goal9" value="5">
                     <label for="goal9_5">5</label>
                 </div>
-<h3>How clear are your boundaries in a relationship?</h3>
+<h4>How clear are your boundaries in a relationship?</h4>
 <div class="rating">
                     <input type="radio" id="goal10_1" name="goal10" value="1">
                     <label for="goal10_1">1</label>
@@ -552,7 +550,7 @@
                     <input type="radio" id="goal10_5" name="goal10" value="5">
                     <label for="goal10_5">5</label>
                 </div>
-<h3>Rate your comfort level in handling finances in a relationship.</h3>
+<h4>Rate your comfort level in handling finances in a relationship.</h4>
 <div class="rating">
                     <input type="radio" id="goal11_1" name="goal11" value="1">
                     <label for="goal11_1">1</label>
@@ -565,7 +563,7 @@
                     <input type="radio" id="goal11_5" name="goal11" value="5">
                     <label for="goal11_5">5</label>
                 </div>
-<h3>How balanced do you think your independence and togetherness are in relationships?</h3>
+<h4>How balanced do you think your independence and togetherness are in relationships?</h4>
 <div class="rating">
                     <input type="radio" id="goal12_1" name="goal12" value="1">
                     <label for="goal12_1">1</label>
@@ -578,7 +576,7 @@
                     <input type="radio" id="goal12_5" name="goal12" value="5">
                     <label for="goal12_5">5</label>
                 </div>
-<h3>Rate the importance of marriage to you on a scale of 1 to 5.</h3>
+<h4>Rate the importance of marriage to you on a scale of 1 to 5.</h4>
 <div class="rating">
                     <input type="radio" id="goal13_1" name="goal13" value="1">
                     <label for="goal13_1">1</label>
@@ -591,7 +589,7 @@
                     <input type="radio" id="goal13_5" name="goal13" value="5">
                     <label for="goal13_5">5</label>
                 </div>
-<h3>How well do you prioritize your partner in your life?</h3>
+<h4>How well do you prioritize your partner in your life?</h4>
 <div class="rating">
                     <input type="radio" id="goal14_1" name="goal14" value="1">
                     <label for="goal14_1">1</label>
@@ -604,7 +602,7 @@
                     <input type="radio" id="goal14_5" name="goal14" value="5">
                     <label for="goal14_5">5</label>
                 </div>
-<h3>How important is trust to you in a relationship?</h3>
+<h4>How important is trust to you in a relationship?</h4>
 <div class="rating">
                     <input type="radio" id="goal15_1" name="goal15" value="1">
                     <label for="goal15_1">1</label>
@@ -617,7 +615,7 @@
                     <input type="radio" id="goal15_5" name="goal15" value="5">
                     <label for="goal15_5">5</label>
                 </div>
-<h3>Rate your ability to maintain emotional connection in a relationship.</h3>
+<h4>Rate your ability to maintain emotional connection in a relationship.</h4>
 <div class="rating">
                     <input type="radio" id="goal16_1" name="goal16" value="1">
                     <label for="goal16_1">1</label>
@@ -630,7 +628,7 @@
                     <input type="radio" id="goal16_5" name="goal16" value="5">
                     <label for="goal16_5">5</label>
                 </div>
-<h3>How important is humor in your relationships?</h3>
+<h4>How important is humor in your relationships?</h4>
 <div class="rating">
                     <input type="radio" id="goal17_1" name="goal17" value="1">
                     <label for="goal17_1">1</label>
@@ -643,7 +641,7 @@
                     <input type="radio" id="goal17_5" name="goal17" value="5">
                     <label for="goal17_5">5</label>
                 </div>
-<h3>Rate your ability to handle differences in opinion.</h3>
+<h4>Rate your ability to handle differences in opinion.</h4>
 <div class="rating">
                     <input type="radio" id="goal18_1" name="goal18" value="1">
                     <label for="goal18_1">1</label>
@@ -656,7 +654,7 @@
                     <input type="radio" id="goal18_5" name="goal18" value="5">
                     <label for="goal18_5">5</label>
                 </div>
-<h3>How open are you to forgiveness in relationships?</h3>
+<h4>How open are you to forgiveness in relationships?</h4>
 <div class="rating">
                     <input type="radio" id="goal19_1" name="goal19" value="1">
                     <label for="goal19_1">1</label>
@@ -669,7 +667,7 @@
                     <input type="radio" id="goal19_5" name="goal19" value="5">
                     <label for="goal19_5">5</label>
                 </div>
-<h3>How important is commitment to you in a relationship?</h3>
+<h4>How important is commitment to you in a relationship?</h4>
 <div class="rating">
                     <input type="radio" id="goal20_1" name="goal20" value="1">
                     <label for="goal20_1">1</label>
@@ -741,36 +739,6 @@
         
         requestAnimationFrame(scrollAnimation);
     }
-</script>
-
-<script>
-        document.getElementById('testForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission behavior
-
-            // Send an HTTP request to your backrooms website
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'backrooms.php', true); // Replace 'backrooms.php' with the URL of your server-side script
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === XMLHttpRequest.DONE) {
-                    if (xhr.status === 200) {
-                        console.log('Submitted successfully');
-                    } else {
-                        console.error('Failed to submit');
-                    }
-                }
-            };
-            xhr.send('submission=submitted'); // You can send any data you want to the server-side script
-        });
-    </script>
-
-<script>
-    document.getElementById('submitBtn').addEventListener('click', function() {
-        // Display "Submitted" message on backrooms.html
-        localStorage.setItem('submissionStatus', 'Submitted');
-        // Redirect the user to testpayment.html
-        window.location.href = 'testpayment.html';
-    });
 </script>
 
 </body>
