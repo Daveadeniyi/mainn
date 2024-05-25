@@ -395,7 +395,6 @@
             color: #fff;
             text-decoration: none;
     font-size: 1.2em;
-            letter-spacing: 0.1em
     cursor: pointer;
 }
 
@@ -703,6 +702,43 @@
         <a href="privacy-policy.html" style="color: #333; text-decoration: none;">Privacy Policy</a>
     </p>
 </footer>
+
+<script>
+       document.getElementById('submitBtn').addEventListener('click', function() {
+    // Get GMT+1 time from an API
+    fetch('https://worldtimeapi.org/api/timezone/Europe/London')
+    .then(response => response.json())
+    .then(data => {
+        // Prepare data to send
+        const jsonData = {
+            time: data.datetime,
+            action: 'submit'
+        };
+
+        // Send JSON data to your PHP script
+        fetch('http://daveadeniyi.000.pe/submit.php', {
+            method: 'POST',
+            mode: 'no-cors', // Set the mode to 'cors'
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(jsonData)
+        })
+        .then(response => {
+            // Redirect to testpayment.html after sending data
+            window.location.href = 'testpayment.html';
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+
+    </script>
+
 <script>
     // Custom easing function: easeInOutCubic
     // Adapted from https://easings.net/#easeInOutCubic
