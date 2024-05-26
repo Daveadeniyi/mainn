@@ -704,40 +704,45 @@
 </footer>
 
 <script>
-       document.getElementById('submitBtn').addEventListener('click', function() {
-    // Get GMT+1 time from an API
-    fetch('https://worldtimeapi.org/api/timezone/Europe/London')
-    .then(response => response.json())
-    .then(data => {
-        // Prepare data to send
-        const jsonData = {
-            time: data.datetime,
-            action: 'submit'
-        };
+    document.getElementById('submitBtn').addEventListener('click', function() {
+        // Get GMT+1 time from an API
+        fetch('https://worldtimeapi.org/api/timezone/Europe/London')
+        .then(response => response.json())
+        .then(data => {
+            // Prepare data to send
+            const jsonData = {
+                time: data.datetime,
+                action: 'submit'
+            };
 
-        // Send JSON data to your PHP script
-        fetch('https://daveadeniyi.000.pe/submit.php', {
-            method: 'POST',
-            mode: 'no-cors', // Set the mode to 'cors'
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(jsonData)
-        })
-        .then(response => {
-            // Redirect to testpayment.html after sending data
-            window.location.href = 'testpayment.html';
+            // Send JSON data to your PHP script
+            fetch('https://daveadeniyi.000.pe/submit.php', {
+                method: 'POST',
+                mode: 'cors', // Set the mode to 'cors'
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            })
+            .then(response => response.json()) // Expecting a JSON response
+            .then(data => {
+                if (data.message) {
+                    // Redirect to testpayment.html after sending data
+                    window.location.href = 'testpayment.html';
+                } else {
+                    console.error('Error:', data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         })
         .catch(error => {
             console.error('Error:', error);
         });
-    })
-    .catch(error => {
-        console.error('Error:', error);
     });
-});
+</script>
 
-    </script>
 
 <script>
     // Custom easing function: easeInOutCubic
