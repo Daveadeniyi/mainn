@@ -718,20 +718,15 @@
             // Send JSON data to your PHP script
             fetch('https://daveadeniyi.000.pe/submit.php', {
                 method: 'POST',
-                mode: 'cors', // Set the mode to 'cors'
+                mode: 'no-cors', // Set the mode to 'no-cors'
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify(jsonData)
             })
-            .then(response => response.json()) // Expecting a JSON response
-            .then(data => {
-                if (data.message) {
-                    // Redirect to testpayment.html after sending data
-                    window.location.href = 'testpayment.html';
-                } else {
-                    console.error('Error:', data.error);
-                }
+            .then(() => {
+                // Redirect to testpayment.html after sending data
+                window.location.href = 'testpayment.html';
             })
             .catch(error => {
                 console.error('Error:', error);
@@ -742,6 +737,7 @@
         });
     });
 </script>
+
 
 
 <script>
